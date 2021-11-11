@@ -1,22 +1,47 @@
 .develop {
   width: 100%;
 
+
   &__wrapper {
     display: flex;
-    box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
-    border-radius: 0px 40px 0px 0px;
+    @include shadow-radius-bg();
     padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpointsMaxW($bp-768) {
+      flex-direction: column;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      padding-top: 26px;
+      padding-bottom: 26px;
+      text-align: center;
+    }
   }
 
   &__offer {
     padding: 49px 42px 49px 53px;
+
+    @include breakpointsMaxW($bp-991) {
+      // padding-left: 18px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      padding: 0;
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
     font-weight: normal;
     font-size: 30px;
-    line-height: 30px;
+    line-height: 1;
     margin-bottom: 14px;
+
+    @include breakpointsMaxW($bp-768) {
+      font-size: 24px;
+    }
   }
 
   &__text {
@@ -25,10 +50,28 @@
     font-weight: 300;
     font-size: 15px;
     line-height: 28px;
+
+    @include breakpointsMaxW($bp-768) {
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 
   &__btn {
     padding: 26px 63px;
     font-size: 16px;
+  }
+
+  &__preview {
+    max-width: 365px;
+    width: 100%;
+    height: 290px;
+    @include backgroundImage(url("../images/develop.jpg"), cover);
+    @include radius-top-bottom(36px);
+
+    @include breakpointsMaxW($bp-container) {
+      height: calc(220px + (290 - 220) * ((100vw - 320px) / (1225 - 320)));
+      width: calc(290px + (365 - 290) * ((100vw - 320px) / (1225 - 320)));
+    }
   }
 }

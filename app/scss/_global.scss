@@ -154,19 +154,22 @@ body {
     font-size: 15px;
     line-height: 16px;
 
+    &:hover {
+      box-shadow: none;
+    }
+
     &::after {
-      position: absolute;
-      content: '';
+      display: block;
+      @include pseudoElDefault();
+      @include background();
       width: 30px;
       height: 30px;
       top: 50%;
       left: 0;
       transform: translateY(-50%);
-
       background-image: url('../images/icons/chevron-catalog.svg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+      // mask: url('../images/sprite.svg#chevron') no-repeat center/50%;
+      // background-color: var(--color-accent);
     }
   }
 
@@ -182,21 +185,23 @@ body {
     text-align: center;
     color: var(--color-dark);
 
+    @include breakpointsMaxW($bp-768) {
+      font-size: 15px;
+    }
+
     span {
       position: relative;
 
       &::after {
-        position: absolute;
-        content: '';
+        @include pseudoElDefault();
         width: 30px;
         height: 30px;
-        background-image: url('../images/icons/reverse.svg');
-        background-repeat: no-repeat;
-        background-size: 30px 30px;
-        background-position: center;
         left: -42px;
         top: 50%;
         transform: translateY(-50%);
+
+        @include maskImage(url('../images/sprite.svg#reverse'), contain);
+        background-color: var(--color-dark);
       }
     }
   }

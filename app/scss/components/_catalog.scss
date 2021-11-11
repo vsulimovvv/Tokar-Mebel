@@ -2,7 +2,7 @@
   padding-bottom: 145px;
 
   &__title {
-    margin-bottom: 42px;
+    margin-bottom: 54px;
   }
 
   &__body {
@@ -31,8 +31,14 @@
   }
 
   &__item {
+    width: 100%;
+
     @include breakpointsMaxW($bp-991) {
       justify-self: center;
+    }
+
+    @include breakpointsMaxW($bp-420) {
+      max-width: 300px;
     }
   }
 

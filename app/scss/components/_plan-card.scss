@@ -45,19 +45,7 @@
       margin-bottom: 10px;
     }
 
-    &::after {
-      position: absolute;
-      content: '';
-      width: 5px;
-      height: 10px;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      background-image: url('../images/icons/chevron.svg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
+    @include chevron-on-left();
   }
 
   &__info {

@@ -16,28 +16,6 @@
   }
 }
 
-@mixin chevron-on-left {
-  position: relative;
-  transition: 150ms ease;
-
-  &::after {
-    position: absolute;
-    content: '';
-    width: 5px;
-    height: 10px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url('../images/icons/chevron.svg');
-    left: 0;
-    top: 6px;
-  }
-
-  &:hover {
-    color: var(--color-accent);
-  }
-}
-
 @mixin arrow-up {
   position: relative;
   transition: 150ms ease;
@@ -83,14 +61,8 @@
   border-radius: 0px $n 0px 0px;
 }
 
-
 //  margin-bottom: calc(28px + (36 - 28) * ((100vw - 320px) / (1225 - 320)));
 
-@mixin responsiveProperty($property, $startSize, $minSize) {
-  $addSize: $startSize - $minSize;
-  // #{$property}: $startSize + px;
-  // #{$property}: calc(#{$minSize + px} + $addSize * ((100vw - 320px) / ($bp-container - 320)));
-}
 
 @mixin afterIcon($image, $w, $h) {
   background-image: $image;
@@ -103,5 +75,50 @@
     repeat: no-repeat;
     position: center;
     size: contain;
+  }
+}
+
+@mixin img() {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@mixin backgroundImage($image, $size) {
+  background: {
+    image: $image;
+    repeat: no-repeat;
+    position: center;
+    size: $size;
+  }
+}
+
+@mixin maskImage($image, $size) {
+  mask: $image no-repeat center/$size;
+}
+
+@mixin pseudoElDefault() {
+  position: absolute;
+  content: '';
+}
+
+@mixin chevron-on-left {
+  position: relative;
+  transition: 150ms ease;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 10px;
+    left: 0;
+    top: 6px;
+
+    mask: url('../images/sprite.svg#chevron') no-repeat center/cover;
+    background-color: var(--color-accent);
+  }
+
+  &:hover {
+    color: var(--color-accent);
   }
 }
