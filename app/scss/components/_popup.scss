@@ -1,0 +1,115 @@
+.popup {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 450ms ease;
+
+  opacity: 0;
+  visibility: hidden;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+
+    .popup__container {
+      transform: translateY(0);
+    }
+  }
+
+  &__container {
+    border-radius: 0px 40px 0px 0px;
+    max-width: 534px;
+    width: 100%;
+    z-index: 101;
+    background-color: var(--color-white);
+    max-height: 620px;
+    position: relative;
+
+    transform: translateY(-100%);
+    transition: 350ms ease-in;
+    transition-delay: 150ms ease;
+
+
+  }
+
+  &__close {
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    width: 35px;
+    height: 35px;
+    background-image: url('../images/icons/close.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 102;
+
+    @include breakpointsMaxW($bp-768) {
+      right: 50%;
+      transform: translateX(50%);
+      top: -40px;
+    }
+  }
+
+  &__top {
+    height: 220px;
+    padding-left: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    background-image: url('../images/content/popups/1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom;
+
+
+    @include breakpointsMaxW($bp-768) {
+      height: 110px;
+    }
+  }
+
+  &__caption {
+    max-width: 220px;
+  }
+
+  &__body {
+    padding: 35px 72px 40px;
+
+    @include breakpointsMaxW($bp-768) {
+      padding: 32px 20px;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .form-contacts {
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  &--form {
+    .popup__top {
+      background-image: url('../images/content/popups/2.png');
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+}

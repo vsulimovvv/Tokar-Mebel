@@ -1,0 +1,112 @@
+.hero {
+  background-color: var(--color-bg);
+
+  .swiper-wrapper {
+    min-width: 0;
+  }
+
+  &__wrapper {
+    width: 100%;
+    position: relative;
+    background-image: url('../images/content/hero-slider/slide-1.png');
+    background-repeat: no-repeat;
+    background-size: 615px 500px;
+    background-position: 100% 13%;
+
+
+    @include breakpointsMaxW($bp-991) {
+      background-position: left 50%;
+
+      background-size: calc(300px + (600 - 300) * ((100vw - 320px) / (1225 - 320)));
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      background-position: center;
+    }
+
+
+    &:nth-child(2) {
+      background-image: url('../images/content/hero-slider/slide-2.png')
+    }
+  }
+
+  &__offer {
+    padding-top: 120px;
+    padding-bottom: 155px;
+
+    @include breakpointsMaxW($bp-991) {
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      height: calc(572px + (950 - 572) * ((100vw - 320px) / (1225 - 320)));
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 50px;
+    max-width: 550px;
+    margin-bottom: 11px;
+
+    font-size: calc(24px + (38 - 24) * ((100vw - 320px) / (1225 - 320)));
+    line-height: calc(30px + (50 - 30) * ((100vw - 320px) / (1225 - 320)));
+
+    @include breakpointsMaxW($bp-768) {
+      text-align: center;
+      max-width: 100%;
+    }
+
+    @include breakpointsMinW($bp-container) {
+      font-size: 38px;
+      line-height: 50px;
+    }
+
+    @include breakpointsMaxW($bp-420) {
+    }
+  }
+
+  &__text {
+    margin-bottom: 28px;
+    max-width: 502px;
+    font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1225 - 320)));
+    line-height: calc(24px + (40 - 24) * ((100vw - 320px) / (1225 - 320)));
+
+    @include breakpointsMaxW($bp-768) {
+      text-align: center;
+      max-width: 100%;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      margin-top: auto;
+
+    }
+
+    @include breakpointsMaxW($bp-420) {
+      font-size: 15px;
+    }
+
+    @include breakpointsMinW($bp-container) {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  &__actions {
+    @include breakpointsMaxW($bp-768) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+
+
+  .navigation {
+    position: absolute;
+    bottom: 100px;
+    right: 40px;
+    width: 80px;
+  }
+}

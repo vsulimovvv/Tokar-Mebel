@@ -1,0 +1,107 @@
+@mixin breakpointsMaxW($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin breakpointsMinW($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin breakpointsMaxH($bp) {
+  @media (max-height: $bp) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin chevron-on-left {
+  position: relative;
+  transition: 150ms ease;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/icons/chevron.svg');
+    left: 0;
+    top: 6px;
+  }
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+@mixin arrow-up {
+  position: relative;
+  transition: 150ms ease;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/icons/arrow-up.svg');
+    right: 0;
+    top: 6px;
+
+    transform: translateY(5px);
+    transition: 150ms ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &:hover {
+    &::before {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+@mixin shadow-radius-bg {
+  background-color: var(--color-white);
+  box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
+  border-radius: 0px 40px 0px 0px;
+}
+
+@mixin radius-top-bottom($n) {
+  border-radius: 0px $n;
+}
+
+@mixin radius-top($n) {
+  border-radius: 0px $n 0px 0px;
+}
+
+
+//  margin-bottom: calc(28px + (36 - 28) * ((100vw - 320px) / (1225 - 320)));
+
+@mixin responsiveProperty($property, $startSize, $minSize) {
+  $addSize: $startSize - $minSize;
+  // #{$property}: $startSize + px;
+  // #{$property}: calc(#{$minSize + px} + $addSize * ((100vw - 320px) / ($bp-container - 320)));
+}
+
+@mixin afterIcon($image, $w, $h) {
+  background-image: $image;
+  width: $w;
+  height: $h;
+}
+
+@mixin background() {
+  background: {
+    repeat: no-repeat;
+    position: center;
+    size: contain;
+  }
+}

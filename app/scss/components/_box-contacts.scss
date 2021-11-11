@@ -1,0 +1,145 @@
+.box-contacts {
+  padding: 32px 40px 46px;
+  font-size: 16px;
+  line-height: 22px;
+  width: 100%;
+  background: var(--color-white);
+  box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
+  border-radius: 0px 40px 0px 0px;
+  position: relative;
+
+  @include breakpointsMaxW($bp-576) {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 90px;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 62px;
+    height: 62px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 44px;
+
+    @include breakpointsMaxW($bp-576) {
+      height: 50px;
+      width: 50px;
+      top: 60px;
+      left: 30px;
+    }
+  }
+
+
+  &__title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 6px;
+
+    @include breakpointsMaxW($bp-576) {
+      font-size: 20px;
+      line-height: 36px;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+
+    display: flex;
+
+    @include breakpointsMaxW($bp-576) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+
+    &:last-child {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__strong {
+    font-weight: 700;
+    margin-left: auto;
+
+    @include breakpointsMaxW($bp-576) {
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    font-weight: 600;
+    line-height: 1;
+    color: var(--color-accent);
+    border-bottom: 1px dashed var(--color-accent);
+  }
+
+  &--telephones {
+    .box-contacts__text {
+      max-width: 285px;
+    }
+
+    &::after {
+      background-image: url('../images/icons/telephones-icon.svg');
+    }
+  }
+
+  &--mail {
+    .box-contacts__text {
+      max-width: 385px;
+    }
+
+    &::after {
+      background-image: url('../images/icons/mail-icon.svg');
+    }
+  }
+
+  &--schedule {
+    .box-contacts__text {
+      max-width: 260px;
+    }
+
+    &::after {
+      background-image: url('../images/icons/schedule-icon.svg');
+    }
+  }
+
+  &--messengers {
+    .socials {
+      margin-bottom: 23px;
+
+      &__link {
+        width: 46px;
+        height: 46px;
+      }
+    }
+
+    &::after {
+      background-image: url('../images/icons/messengers-icon.svg');
+    }
+  }
+
+  &--address {
+    .box-contacts__strong {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .box-contacts__title {
+      margin-bottom: 15px;
+    }
+
+    box-shadow: none;
+    border-radius: 0;
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+}

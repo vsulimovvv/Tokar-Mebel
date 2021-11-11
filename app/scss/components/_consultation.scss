@@ -1,0 +1,74 @@
+.consultation {
+  &__wrapper {
+    padding: 5px;
+    padding-left: 80px;
+    background-color: var(--color-bg);
+
+    display: grid;
+    grid-template-columns: minmax(auto, 605px) 1fr;
+    gap: 60px;
+  }
+
+  &__offer {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 38px;
+    max-width: 380px;
+    margin-bottom: 24px;
+  }
+
+  &__preview {
+    max-width: 420px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+
+    a {
+      color: var(--color-accent);
+    }
+  }
+
+  &__form {
+    height: 58px;
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    max-width: 390px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white);
+    padding: 18px;
+    padding-left: 81px;
+    border: 1px solid #E7D8C7;
+    margin-right: 10px;
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+
+  }
+
+  &__button {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 20px 65px;
+  }
+}

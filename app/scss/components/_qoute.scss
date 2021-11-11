@@ -1,0 +1,55 @@
+.quote {
+  padding: 41px 50px 35px 43px;
+  background-color: var(--color-white);
+  max-width: 570px;
+  width: 100%;
+  padding-left: 122px;
+  box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
+  border-radius: 8px;
+
+  @include breakpointsMaxW($bp-768) {
+    padding-left: 43px;
+    padding: 22px;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 38px;
+    left: 46px;
+    width: 54px;
+    height: 54px;
+    background-image: url('../images/icons/qoute.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include breakpointsMaxW($bp-768) {
+      display: none;
+    }
+  }
+
+  &__name {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 8px;
+
+    @include breakpointsMaxW($bp-768) {
+      text-align: center;
+      max-width: 270px;
+      margin: 0 auto 8px;
+    }
+
+    @include breakpointsMaxW($bp-container) {
+      font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1225 - 320)));
+      line-height: calc(24px + (30 - 24) * ((100vw - 320px) / (1225 - 320)));
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}

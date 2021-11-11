@@ -1,0 +1,140 @@
+.header {
+  padding: 38px 0;
+  background-color: var(--color-bg);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 13px;
+
+    @include breakpointsMaxW($bp-991) {
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    margin-right: 34px;
+    width: 536px;
+  }
+
+  &__socials {
+    max-width: 140px;
+    width: 100%;
+    margin-right: 40px;
+
+    @include breakpointsMaxW($bp-container) {
+      display: none;
+    }
+  }
+
+  &__phone {
+    margin-right: 25px;
+    max-width: 363px;
+    width: 100%;
+
+    @include breakpointsMaxW($bp-container) {
+      margin-left: auto;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      display: none !important;
+    }
+  }
+
+  &__select {
+    width: 33px;
+
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+    }
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: minmax(auto, 620px) minmax(auto, 1fr);
+    gap: 80px;
+
+
+    @include breakpointsMaxW($bp-container) {
+      grid-template-columns: 1fr;
+      // gap: 30px;
+      gap: 0;
+    }
+
+    @include breakpointsMaxW($bp-768) {}
+  }
+
+  .toggle-menu {
+    width: 25px;
+    height: 20px;
+    background-color: var(--color-accent);
+  }
+
+  &__phone-icon {
+    width: 25px;
+    height: 20px;
+    background-color: var(--color-accent);
+  }
+
+  .menu {
+
+    &__list {
+      max-width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 0;
+    }
+
+    &__item {
+      width: auto;
+
+      &:not(:last-child) {
+        // margin-right: 80px;
+      }
+    }
+  }
+}
+
+.phone-box {
+  display: flex;
+  align-items: center;
+
+  &__phone {
+    max-width: 180px;
+    width: 100%;
+    margin-right: 27px;
+    text-align: center;
+
+    a {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 19px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  &__button {
+    text-align: center;
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 7px;
+    width: 160px;
+  }
+}

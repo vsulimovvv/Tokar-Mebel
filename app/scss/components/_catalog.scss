@@ -1,0 +1,55 @@
+.catalog {
+  padding-bottom: 145px;
+
+  &__title {
+    margin-bottom: 42px;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: minmax(auto, 270px) minmax(auto, 1fr);
+    gap: 30px;
+
+    @include breakpointsMaxW($bp-container) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @include breakpointsMaxW($bp-991) {
+      gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    @include breakpointsMaxW($bp-991) {
+      justify-self: center;
+    }
+  }
+
+  &__filters {
+    @include breakpointsMaxW($bp-container) {
+      display: none;
+    }
+  }
+
+  &__content {
+    margin-bottom: 30px;
+  }
+
+  &__develop {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  &__btn {}
+}

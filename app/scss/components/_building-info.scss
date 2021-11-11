@@ -1,0 +1,21 @@
+.building-info {
+  &:not(:last-child) {
+    margin-bottom: 145px;
+  }
+
+  &--two-box {
+    .building-info__boxes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+  }
+
+  &--two-img {
+    .info-box__previews {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+  }
+}

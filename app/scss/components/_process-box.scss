@@ -1,0 +1,90 @@
+.process-box {
+  display: grid;
+  grid-template-columns: minmax(auto, 266px) 1fr;
+  gap: 34px;
+
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  &__item {
+    padding: 28px;
+    padding-bottom: 36px;
+    padding-top: 120px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+    box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
+    border-radius: 0px 40px 0px 0px;
+    position: relative;
+    height: 240px;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 62px;
+      height: 62px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      top: 28px;
+      left: 28px;
+
+      background-image: url('../images/icons/process-box-1.svg');
+    }
+  }
+
+  &__name {
+    padding: 15px 17px;
+    background-color: var(--color-accent);
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 30px;
+    color: Var(--color-white);
+    margin-bottom: 20px;
+    position: relative;
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: '';
+      height: 50px;
+      width: 50px;
+      background-color: var(--color-white);
+      right: -22px;
+      transform: rotate(45deg);
+
+    }
+
+    &::after {
+      top: -26px;
+    }
+
+    &::before {
+      bottom: -26px;
+    }
+
+  }
+
+  &__text {
+    height: 90px;
+  }
+
+  &__cursor {
+    padding-top: 28px;
+
+    p {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 24px;
+
+      padding-left: 15px;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.article {
+  max-width: 370px;
+  width: 100%;
+
+  &__img {
+    margin-bottom: 27px;
+    height: 260px;
+
+    @include breakpointsMaxW($bp-container) {
+      height: calc(210px + (260 - 210) * ((100vw - 320px) / (1225 - 320)));
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      @include radius-top-bottom(36px);
+    }
+  }
+
+  &__name {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    width: 114px;
+    height: 34px;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 12px;
+    text-transform: uppercase;
+    border-right: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+}

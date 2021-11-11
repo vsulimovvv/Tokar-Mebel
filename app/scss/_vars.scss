@@ -1,0 +1,30 @@
+// Color 
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+
+  --color-dark: #2B2A28;
+  --color-bg: #FFFBF6;
+  --color-brown: #3D1E19;
+  --color-accent: #CB8734;
+}
+
+// * breakpointsMaxW
+$bp-container: 1200px;
+$bp-991: 991px;
+$bp-768: 768px;
+$bp-650: 650px;
+$bp-576: 576px;
+$bp-420: 420px;
+
+// *=== Fonts
+$Gilroy: 'Gilroy';
+
+// * ==== Z-Index
+$z-1: 1;
+$z-5: 5;
+$z-10: 10;
+$z-100: 100;
+
+// * ===== Radius
+$r-36: 36px;

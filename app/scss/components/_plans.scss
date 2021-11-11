@@ -1,0 +1,39 @@
+.plans {
+  background-color: var(--color-bg);
+  padding-top: 145px;
+  padding-bottom: 145px;
+
+  &__title {
+    max-width: 460px;
+    margin-bottom: 40px;
+    line-height: 48px;
+
+    @include breakpointsMaxW($bp-768) {
+      margin: 0 auto 40px;
+      line-height: 30px;
+      text-align: center;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    max-width: 370px;
+
+    @include breakpointsMaxW($bp-991) {
+      justify-self: center;
+    }
+  }
+}

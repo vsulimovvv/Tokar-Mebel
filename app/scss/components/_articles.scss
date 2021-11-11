@@ -1,0 +1,44 @@
+.articles {
+  padding-top: 145px;
+  padding-bottom: 145px;
+
+  &__title {
+    margin-bottom: 40px;
+    line-height: 48px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  &__arrow--prev {
+    transform: rotate(-180deg);
+  }
+
+  &__arrows {
+    width: 60px;
+  }
+
+  .swiper-pagination {
+    width: 30px;
+    height: 30px;
+    color: #000;
+    // background-color: #000;
+  }
+
+
+  // .swiper {
+  //   overflow: visible;
+  // }
+
+  // .swiper-pagination {
+  //   top: 50px;
+  // }
+}

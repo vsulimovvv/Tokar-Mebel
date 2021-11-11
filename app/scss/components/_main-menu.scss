@@ -1,0 +1,156 @@
+.main-menu {
+  max-width: 620px;
+  width: 100%;
+
+  &__schedule {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(auto, 185px) minmax(auto, 150px) minmax(auto, 195px);
+    gap: 50px;
+    justify-content: space-between;
+
+    @include breakpointsMaxW($bp-768) {
+      display: none;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+
+  @include breakpointsMaxW($bp-768) {
+    max-width: 100%;
+  }
+}
+
+.menu-accent {
+  max-width: 620px;
+  margin-bottom: 40px;
+
+  box-shadow: 0px 0px 20px rgba(43, 42, 40, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+
+  @include breakpointsMaxW($bp-768) {
+    max-width: 100%;
+    box-shadow: none;
+    margin-bottom: 0;
+  }
+
+  &__list {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    @include breakpointsMaxW($bp-768) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 52px;
+      background-color: #999;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 25px 60px;
+    background-color: var(--color-brown);
+    color: var(--color-white);
+
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+
+    @include breakpointsMaxW($bp-768) {
+      padding: 15px 0;
+      text-align: center;
+      background-color: transparent;
+      color: var(--color-dark);
+      border-bottom: 1px solid #E6D8C7;
+      border-top: 1px solid #E6D8C7;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  margin-bottom: 32px;
+
+  @include breakpointsMaxW($bp-768) {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  &__list {
+    display: flex;
+    max-width: 277px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+
+    @include breakpointsMaxW($bp-768) {
+      flex-direction: column;
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 27px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__link {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+
+    @include breakpointsMaxW($bp-768) {
+      display: block;
+      padding: 15px 0;
+      text-align: center;
+      background-color: transparent;
+      color: var(--color-dark);
+      border-bottom: 1px solid #E6D8C7;
+      border-top: 1px solid #E6D8C7;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    margin-left: auto;
+    flex-shrink: 0;
+
+    @include breakpointsMaxW($bp-768) {
+      margin-left: 0;
+     order: 3;
+    }
+  }
+}

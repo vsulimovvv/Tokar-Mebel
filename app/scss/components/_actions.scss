@@ -1,0 +1,11 @@
+.actions {
+  &__btn {
+    margin-right: 45px;
+    padding: 25px 60px;
+
+    @include breakpointsMaxW($bp-768) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+}

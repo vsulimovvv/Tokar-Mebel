@@ -1,0 +1,40 @@
+.building-slider {
+  &__slider {
+    // display: flex;
+
+    display: grid;
+    grid-template-columns: minmax(auto, 970px) minmax(auto, 170px);
+    gap: 30px;
+    min-width: 0;
+
+    .swiper {
+      min-width: 0;
+      max-width: 970px;
+      height: 560px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .mySwiper {
+      min-width: 0;
+      .swiper-wrapper {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .swiper-slide {
+        width: 100%;
+        height: 130px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

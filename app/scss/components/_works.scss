@@ -1,0 +1,13 @@
+.works {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  &__item {
+    &--big {
+      grid-column: 2/4;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.plan-card {
+  padding: 5px;
+  background-color: var(--color-white);
+  height: 650px;
+  border-radius: 0px 40px 0px 0px;
+  box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
+  overflow: hidden;
+
+  @include breakpointsMaxW($bp-768) {
+    height: auto;
+  }
+
+  &__img {
+    margin-bottom: 36px;
+    max-width: 360px;
+    height: 280px;
+
+    @include breakpointsMaxW($bp-container) {
+      height: calc(200px + (280 - 200) * ((100vw - 320px) / (1225 - 320)));
+      margin-bottom: calc(28px + (36 - 28) * ((100vw - 320px) / (1225 - 320)));
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include radius-top-bottom($r-36);
+    }
+  }
+
+  &__name {
+    font-weight: 400;
+    margin-bottom: 13px;
+  }
+
+  &__item {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+    padding-left: 20px;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 5px;
+      height: 10px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-image: url('../images/icons/chevron.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &__info {
+    padding: 0 40px;
+
+    @include breakpointsMaxW($bp-container) {
+      padding: 0 calc(24px + (40 - 24) * ((100vw - 320px) / (1225 - 320)));
+      padding-bottom: calc(24px + (40 - 24) * ((100vw - 320px) / (1225 - 320)));
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+
+  &__link {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+    position: relative;
+    color: var(--color-accent);
+    padding-left: 42px;
+
+    @include breakpointsMaxW($bp-768) {
+      display: none;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 30px;
+      height: 30px;
+      top: 50%;
+      left: 0;
+      background-image: url('../images/icons/chevron-catalog.svg');
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}

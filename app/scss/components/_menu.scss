@@ -1,0 +1,61 @@
+// .menu {
+//   &__list {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+
+//   &__item {
+//     height: 72px;
+//     position: relative;
+
+//     &:nth-child(1) {
+//       border-top-left-radius: 8px;
+//       border-bottom-left-radius: 8px;
+//     }
+
+//     &:nth-child(3) {
+//       border-top-right-radius: 8px;
+//       border-bottom-right-radius: 8px;
+//     }
+
+//     overflow: hidden;
+
+//     &::after {
+//       content: '';
+//       position: absolute;
+//       right: 0;
+//       top: 50%;
+//       transform: translateY(-50%);
+//       width: 1px;
+//       height: 52px;
+//       background-image: url('../images/icons/dashed.svg');
+//       background-repeat: no-repeat;
+//       background-size: cover;
+//       background-position: center;
+//     }
+//   }
+
+//   &__link {
+//     display: block;
+// padding: 25px 60px;
+//     font-weight: 700;
+//     font-size: 16px;
+//     line-height: 1.4;
+
+//     // &:not(:last-child) {
+//     //   margin-right: 84px;
+
+//     // }
+
+//     &--brown {
+//       background-color: var(--color-brown);
+//       color: var(--color-white);
+//       padding: 25px 55px;
+//       margin-right: 0;
+//     }
+
+//     &--p0 {
+//       padding-right: 0;
+//     }
+//   }
+// }
