@@ -1,7 +1,50 @@
 .filter-box {
+  z-index: 10;
+  transition: 300ms;
+
+  &.active {
+    .filter-box__drop {
+      opacity: 1;
+      max-height: 100px;
+    }
+
+    .filter-box__top {
+      &::after {
+        transform: rotate(270deg);
+      }
+    }
+  }
+
   &--sort {
     .filter-box__link {
-      @include arrow-up();
+      position: relative;
+      transition: 150ms ease;
+
+      &::before {
+        @include pseudoElDefault();
+        width: 5px;
+        height: 10px;
+        @include maskImage(url('../images/sprite.svg#arrow-up'), cover);
+        background-color: var(--color-accent);
+        right: 5px;
+        top: 6px;
+
+        transform: translateY(5px);
+        transition: 150ms ease;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &:hover {
+        transform: translateX(5px);
+
+        &::before {
+          transform: translateY(0);
+          opacity: 1;
+          visibility: visible;
+        }
+
+      }
     }
   }
 
@@ -12,9 +55,26 @@
   &__top {
     padding: 24px 20px 20px;
     box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
+    // height: 60px;
     border-radius: 8px;
     cursor: pointer;
     margin-bottom: 24px;
+    position: relative;
+    max-height: 60px;
+
+    &::after {
+      @include pseudoElDefault();
+      top: 50%;
+      transform: translateY(-50%);
+      right: 17px;
+      width: 10px;
+      height: 10px;
+      transition: 300ms ease;
+
+      @include maskImage(url('../images/sprite.svg#chevron'), cover);
+      background-color: var(--color-dark);
+      transform: rotate(90deg);
+    }
   }
 
   &__title,
@@ -31,12 +91,17 @@
   &__drop {
     max-width: 86%;
     padding-left: 20px;
+    max-height: 0;
+    overflow: hidden;
+    will-change: max-height;
+    opacity: 0;
+    transition: 300ms ease-in;
+    z-index: 9;
 
     &:not(:last-child) {
       margin-bottom: 28px;
     }
   }
-
 
   &__item {
 
@@ -53,6 +118,117 @@
     padding-left: 20px;
 
     @include chevron-on-left();
+
+    &:hover {
+      transform: translateX(5px);
+    }
+  }
+
+  &--square,
+  &--price {
+    .filter-box__drop {
+      padding-left: 0;
+      max-width: 100%;
+      padding-top: 15px;
+    }
+
+    .filter-box__label {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      width: 120px;
+      height: 40px;
+      letter-spacing: 0.03em;
+      justify-content: flex-end;
+
+      &:first-child {
+        margin-right: 24px;
+        justify-content: flex-start;
+      }
+    }
+
+    .filter-box__text {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .filter-box__inputs {
+      display: flex;
+      align-items: center;
+      margin-bottom: 34px;
+
+      justify-content: space-between;
+    }
+
+    .filter-box__input {
+      margin: 0 6px;
+      border: 1px solid #c1c1c1;
+      line-height: 1;
+      width: 80px;
+      height: 40px;
+      padding: 12px 20px;
+
+      opacity: 0;
+      visibility: hidden;
+      display: none;
+    }
+
+    .filter-box__slider {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 4px;
+    }
+
+    .noUi-target {
+      background-color: #c1c1c1;
+      border: none;
+      box-shadow: none;
+      height: 3px;
+    }
+
+    .noUi-connect {
+      background-color: var(--color-accent);
+    }
+
+    .noUi-horizontal {
+      .noUi-handle {
+        box-shadow: none;
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        background-color: var(--color-accent);
+        top: -8px;
+        cursor: pointer;
+
+        &:active,
+        &:hover {
+          border: 6px solid var(--color-accent);
+          background-color: var(--color-white);
+        }
+
+        &::after,
+        &::before {
+          display: none;
+        }
+
+        .noUi-tooltip {
+          transition: 150ms ease;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(60px) translateX(-50%);
+        }
+
+        &:hover {
+          .noUi-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(45px) translateX(-50%);
+          }
+        }
+      }
+    }
+
 
   }
 }

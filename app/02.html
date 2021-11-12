@@ -22,6 +22,20 @@
 <body>
   
   <div class="main">
+    <div class="filter-actions">
+      <button class="filter-actions__btn filter-actions__btn--filter">
+        <svg>
+          <use xlink:href="images/sprite.svg#filter-icon"></use>
+        </svg>
+      </button>
+      <button class="filter-actions__btn filter-actions__btn--search">
+        <svg>
+          <use xlink:href="images/sprite.svg#search-icon"></use>
+        </svg></button>
+    </div>
+
+
+
     <div class="breadcrumbs">
       <div class="container">
         <ul class="breadcrumbs__list">
@@ -37,10 +51,18 @@
 
     <section class="catalog">
   <div class="container">
-    <div class="catalog__top">
+    <div class="catalog__top top-section">
       <h1 class="catalog__title section-title">Каталог жилых строений</h1>
 
-      <div class="catalog__search search-box"></div>
+      <form class="catalog__search form-search" action="#">
+        <div class="form-search__group">
+          <label class="form-search__label" for="search">
+            <input class="form-search__input" id="search" type="search" name="search"
+              placeholder="Поиск по жилым строениям...">
+          </label>
+        </div>
+      </form>
+      
     </div>
     <div class="catalog__body">
 
@@ -145,7 +167,7 @@
 
         </section>
 
-        <!-- <section class="filter-box filter-box--sort">
+        <section class="filter-box filter-box--sort">
           <div class="filter-box__top">
             <h2 class="filter-box__title">Сортировать по:</h2>
           </div>
@@ -163,22 +185,24 @@
               </li>
             </ul>
           </div>
-        </section> -->
+        </section>
 
         <section class="filter-box filter-box--square">
           <div class="filter-box__top">
             <h2 class="filter-box__title">Площадь (м2):</h2>
           </div>
           <div class="filter-box__drop">
-            <span class="filter-box__text">0.5 м</span>
-            <div class="filter-box__range">
-              <span class="filter-box__bar">
-                <span class="fill" style="width: 65%"></span>
-              </span>
-              <input class="filter-box__input input-range" step="0.5" min="0.5" max="10" value="6.5" type="range">
+            <div class="filter-box__slider range-slider" id="range-slider"></div>
+            <div class="filter-box__inputs">
+              <label class="filter-box__label">
+                <span class="filter-box__text">10</span>
+                <input class="filter-box__input" type="number" min="0" max="1100" id="input-0">
+              </label>
+              <label class="filter-box__label">
+                <input class="filter-box__input" type="number" min="0" max="1100" id="input-1">
+                <span class="filter-box__text">500</span>
+              </label>
             </div>
-            <span class="filter-box__text">10 м</span>
-
           </div>
         </section>
 
@@ -187,14 +211,17 @@
             <h2 class="filter-box__title">Цена (грн):</h2>
           </div>
           <div class="filter-box__drop">
-            <span class="filter-box__text">0.5 м</span>
-            <div class="filter-box__range">
-              <span class="filter-box__bar">
-                <span class="fill" style="width: 65%"></span>
-              </span>
-              <input class="filter-box__input input-range" step="0.5" min="0.5" max="10" value="6.5" type="range">
+            <div class="filter-box__slider range-slider2" id="range-slider"></div>
+            <div class="filter-box__inputs">
+              <label class="filter-box__label">
+                <span class="filter-box__text">100 000</span>
+                <input class="filter-box__input" type="number" min="0" max="5000000" id="input-0">
+              </label>
+              <label class="filter-box__label">
+                <input class="filter-box__input" type="number" min="0" max="5000000" id="input-1">
+                <span class="filter-box__text">5 000 000</span>
+              </label>
             </div>
-            <span class="filter-box__text">10 м</span>
           </div>
 
         </section>

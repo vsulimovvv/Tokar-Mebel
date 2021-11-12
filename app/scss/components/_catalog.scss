@@ -2,7 +2,7 @@
   padding-bottom: 145px;
 
   &__title {
-    margin-bottom: 54px;
+    // margin-bottom: 54px;
   }
 
   &__body {
@@ -57,5 +57,25 @@
     margin-bottom: 35px;
   }
 
-  &__btn {}
+  &__preview {
+    
+  }
+
+  &__search {
+    padding-top: 20px;
+    max-width: 464px;
+
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      max-width: 100%;
+      top: 45px;
+      border: 1px solid #000;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
 }

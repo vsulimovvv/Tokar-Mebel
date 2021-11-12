@@ -1,8 +1,6 @@
 .contacts {
   padding-bottom: 145px;
 
-  &__title {}
-
   &__caption {
     font-weight: 400;
     font-size: 30px;
@@ -56,8 +54,13 @@
     width: 100%;
     height: 800px;
 
+    @include breakpointsMaxW($bp-container) {
+      height: calc(420px + (800 - 420) * ((100vw - 320px) / (1225 - 320)));
+    }
+
     iframe {
       width: 100%;
+      height: 100%;
 
     }
 

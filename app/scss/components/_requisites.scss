@@ -12,52 +12,56 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 
-    @include breakpointsMaxW($bp-991) {
+    @include breakpointsMaxW($bp-container) {
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
     }
 
     @include breakpointsMaxW($bp-768) {
-      // grid-template-columns: 1fr;
-      gap: 10px;
       grid-template-columns: 1fr;
     }
-
-    @include breakpointsMaxW($bp-576) {}
   }
 
   &__item {
+    max-width: 370px;
     width: 100%;
     background-color: var(--color-white);
     height: 160px;
-    padding-right: 26px;
+    padding-right: 20px;
     position: relative;
+    justify-self: center;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding-left: 135px;
+    padding-left: 125px;
+
+    box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
+    border-radius: 8px;
 
     @include breakpointsMaxW($bp-768) {
       padding-top: 26px;
-      padding-left: 110px;
+      padding-left: 90px;
       padding-bottom: 26px;
-      padding-right: 26px;
+      padding-right: 22px;
     }
 
     &::after {
-      position: absolute;
-      content: '';
+      @include pseudoElDefault();
       width: 62px;
       height: 62px;
-      background-image: url('../images/icons/name.svg');
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
+
+      // @include maskImage(url('../images/sprite.svg#name'), contain);
+      @include backgroundImage(url('../images/icons/name.svg'), contain);
+
+      // @include backgroundImage(url('../images/icons/name.svg'), contain);
+
+      background-color: var(--color-accent);
+
       top: 51%;
-      left: 36px;
+      left: 15px;
       transform: translateY(-50%);
+      border-radius: 50%;
 
       @include breakpointsMaxW($bp-768) {
         width: 50px;
@@ -70,6 +74,11 @@
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 7px;
+
+    @include breakpointsMaxW($bp-768) {
+      font-size: 18px;
+      line-height: 20px;
+    }
   }
 
   &__name {

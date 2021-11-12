@@ -16,37 +16,6 @@
   }
 }
 
-@mixin arrow-up {
-  position: relative;
-  transition: 150ms ease;
-
-  &::before {
-    position: absolute;
-    content: '';
-    width: 5px;
-    height: 10px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url('../images/icons/arrow-up.svg');
-    right: 0;
-    top: 6px;
-
-    transform: translateY(5px);
-    transition: 150ms ease;
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  &:hover {
-    &::before {
-      transform: translateY(0);
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-}
-
 @mixin shadow-radius-bg {
   background-color: var(--color-white);
   box-shadow: 0px 0px 30px rgba(43, 42, 40, 0.08);
@@ -62,7 +31,6 @@
 }
 
 //  margin-bottom: calc(28px + (36 - 28) * ((100vw - 320px) / (1225 - 320)));
-
 
 @mixin afterIcon($image, $w, $h) {
   background-image: $image;

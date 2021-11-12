@@ -20,6 +20,12 @@
     width: 26px;
     height: 26px;
     position: relative;
+    border-radius: 50%;
+    transition: 150ms ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
 
     &::after {
       position: absolute;
@@ -32,18 +38,34 @@
     }
 
     &--tg {
+      // &:hover {
+      //   @include pulse(rgb(65, 159, 217));
+      //   animation: pulse 1000ms;
+      // }
+
       &::after {
         background: url('../images/icons/telegram.svg') no-repeat center/contain;
+
       }
     }
 
     &--wp {
+      // &:hover {
+      //   @include pulse(#0DC143);
+      //   animation: pulse 1000ms;
+      // }
+
       &::after {
         background: url('../images/icons/whatsapp.svg') no-repeat center/contain;
       }
     }
 
     &--vb {
+      // &:hover {
+      //   @include pulse(rgb(103, 93, 169));
+      //   animation: pulse 1000ms;
+      // }
+
       &::after {
         background: url('../images/icons/viber.svg') no-repeat center/contain;
       }

@@ -127,14 +127,28 @@ body {
   border-radius: 4px;
   color: var(--color-white);
   padding: 15px 28px;
-  transition: 150ms ease-in;
+  transition: 200ms ease-in;
+  // border: 2px solid transparent;
 
   &:hover {
+    // box-shadow: 0px 4px 4px rgba(203, 135, 52, 0.2);
+
+    // background: transparent;
+    // color: var(--color-accent);
+    // border-color: var(--color-accent);
+    transform: translateY(-5px);
+    animation: pulse 1000ms;
+  }
+
+  &:focus {
     box-shadow: 0px 4px 4px rgba(203, 135, 52, 0.2);
+    outline-color: transparent;
   }
 
   &:active {
     transform: scale(0.98);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
   }
 
   &--big {
@@ -156,6 +170,7 @@ body {
 
     &:hover {
       box-shadow: none;
+
     }
 
     &::after {
@@ -187,6 +202,15 @@ body {
 
     @include breakpointsMaxW($bp-768) {
       font-size: 15px;
+    }
+
+    &:hover {
+      animation: 0;
+      box-shadow: 0px 4px 4px rgba(203, 135, 52, 0.2);
+    }
+
+    &:active{
+      box-shadow: 0px 0px 0px rgba(203, 135, 52, 0.2);
     }
 
     span {
@@ -221,8 +245,6 @@ body {
   transition: 150ms ease-in;
   z-index: 12;
 
-
-
   &::after {
     position: absolute;
     content: '';
@@ -256,3 +278,43 @@ body {
     object-fit: contain;
   }
 }
+
+.filter-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  display: none;
+
+  @include breakpointsMaxW($bp-420) {
+    justify-content: center;
+  }
+
+  @include breakpointsMaxW($bp-991) {
+    display: flex;
+  }
+
+  &__btn {
+    width: 160px;
+    height: 38px;
+    border: 1px solid var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--color-accent);
+    }
+
+    &--filter {
+      // @include maskImage(url('../images/sprite.svg#filter-icon'), 24px);
+      // background-color: var(--color-accent);
+    }
+
+    &--search {}
+  }
+}
+
+input {}

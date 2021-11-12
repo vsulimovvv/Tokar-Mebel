@@ -129,4 +129,121 @@ window.addEventListener('DOMContentLoaded', () => {
     bindModal('.contacts__title', '.popup--form', '.popup__close');
   };
   modals();
+
+  const rangeSliderForPrice = () => {
+    const rangeSlider = document.querySelectorAll('.range-slider');
+    const rangeSlider2 = document.querySelectorAll('.range-slider2');
+
+    rangeSlider.forEach(item => {
+      if (item) {
+        noUiSlider.create(item, {
+          start: [10, 268],
+          connect: true,
+          step: 1,
+          tooltips: [true, true],
+          range: {
+            'min': [10],
+            'max': [500]
+          }
+        });
+        const input0 = document.getElementById('input-0');
+        const input1 = document.getElementById('input-1');
+
+        const inputs = [input0, input1];
+
+        item.noUiSlider.on('update', function (values, handle) {
+          inputs[handle].value = Math.round(values[handle]);
+        });
+
+        const setRangeSlider = (i, value) => {
+          let arr = [null, null];
+          arr[i] = value;
+
+          item.noUiSlider.set(arr);
+        };
+
+        // inputs.forEach((el, index) => {
+        //   el.addEventListener('change', e => {
+        //     setRangeSlider(index, e.currentTarget.value);
+        //   });
+        //   el.addEventListener('input', e => {
+        //     setRangeSlider(index, e.currentTarget.value);
+        //   });
+        // });
+      };
+    });
+
+    rangeSlider2.forEach(item => {
+      if (item) {
+        noUiSlider.create(item, {
+          start: [100000, 2680000],
+          connect: true,
+          step: 1,
+          tooltips: [true, true],
+          range: {
+            'min': [100000],
+            'max': [5000000]
+          }
+        });
+        const input0 = document.getElementById('input-0');
+        const input1 = document.getElementById('input-1');
+
+        const inputs = [input0, input1];
+
+        item.noUiSlider.on('update', function (values, handle) {
+          inputs[handle].value = Math.round(values[handle]);
+        });
+
+        const setRangeSlider = (i, value) => {
+          let arr = [null, null];
+          arr[i] = value;
+
+          item.noUiSlider.set(arr);
+        };
+
+        inputs.forEach((el, index) => {
+          el.addEventListener('change', e => {
+            setRangeSlider(index, e.currentTarget.value);
+          });
+          el.addEventListener('input', e => {
+            setRangeSlider(index, e.currentTarget.value);
+          });
+        });
+      };
+    });
+
+  };
+  rangeSliderForPrice();
+
+  const toggleFullSidebox = () => {
+    const filters = document.querySelectorAll('.filter-box');
+
+    filters.forEach(el => {
+      el.addEventListener('click', e => {
+        const target = e.currentTarget;
+        const content = target.querySelector('.filter-box__drop');
+        
+        target.classList.toggle('active');
+
+        if (target.classList.contains('active')) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+          content.style.maxHeight = null;
+        }
+      });
+    });
+  };
+  toggleFullSidebox();
+
+  const togglePopup = (popup, popupBtn) => {
+    const popupParentEl = document.querySelector(popup);
+    const popupBtnEl = document.querySelector(popupBtn);
+
+    if (popupParentEl) {
+      popupBtnEl.addEventListener('click', e => {
+        popupParentEl.classList.toggle('active')
+      })
+    }
+  }
+  togglePopup('.catalog__search', '.filter-actions__btn--search');
 });

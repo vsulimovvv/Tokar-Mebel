@@ -1,0 +1,37 @@
+.form-search {
+  width: 100%;
+
+  &__group {
+    height: 40px;
+    position: relative;
+    padding-left: 44px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid var(--color-black);
+
+    &::after {
+      @include pseudoElDefault();
+      top: 0;
+      left: 0;
+      width: 26px;
+      height: 26px;
+      @include maskImage(url('../images/sprite.svg#search-icon'), cover);
+      background-color: var(--color-accent);
+    }
+  }
+
+  &__input {
+    &::placeholder {
+      font-size: 13px;
+      line-height: 17px;
+      color: #828282;
+    }
+
+    max-width: 420px;
+    width: 100%;
+
+    @include breakpointsMaxW($bp-991) {
+      max-width: 100%;
+      padding: 0 20px 0 0;
+    }
+  }
+}
