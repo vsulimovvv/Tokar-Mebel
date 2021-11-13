@@ -1,0 +1,110 @@
+.wSelect-hover .wSelect-arrow,
+.wSelect-active .wSelect-arrow {
+  background-position: center center;
+}
+
+.wSelect-selected {
+  margin: 0;
+  padding: 0;
+}
+
+.wSelect-selected.wSelect-option-icon {
+  background-size: contain;
+  width: 20px;
+}
+
+.wSelect.wSelect-theme-classic {
+  width: 40px;
+}
+
+.wSelect-theme-classic.wSelect {
+  min-width: 42px;
+  width: 42px;
+  height: 21px;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.wSelect-arrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background-image: url('../images/icons/arrow-tr.svg');
+  background-size: contain;
+  width: 7px;
+  height: 4px;
+  transform: translateY(-50%);
+  background-position: center;
+}
+
+.wSelect-active .wSelect-arrow {
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+.wSelect.wSelect-theme-classic.wSelect-active {
+  width: 30px;
+  height: 20px;
+  background-size: contain;
+}
+
+.wSelect-option {
+  height: 20px;
+}
+
+.wSelect-option-value.wSelect-option-icon {
+  background-size: contain;
+  width: 30px;
+  height: 20px;
+}
+
+.wSelect-selected.wSelect-option-icon {
+  background-size: contain;
+  width: 30px;
+  height: 20px;
+}
+
+.wSelect-options {
+  height: auto;
+}
+
+.wSelect-options::-webkit-scrollbar {
+  width: 0;
+}
+
+/* ie 10+ firefox */
+.wSelect-options {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.wSelect-theme-classic .wSelect-options {
+  width: 40px;
+  border: none;
+  height: auto;
+}
+
+.wSelect-theme-classic .wSelect-options-holder {
+  min-width: auto;
+}
+
+.wSelect-option-value.wSelect-option-icon {
+  background-size: 15px;
+  background-position: center;
+  min-width: 30px;
+}
+
+
+.wSelect-option {
+  width: 40px;
+  height: 20px;
+}
+
+.wSelect-option-value {
+  padding: 0;
+  margin: 0;
+}
+
+.wSelect-theme-classic .wSelect-options-holder {
+  border: none;
+}

@@ -3,6 +3,7 @@
   transition: 300ms;
 
   &.active {
+
     .filter-box__drop {
       opacity: 1;
       max-height: 100px;

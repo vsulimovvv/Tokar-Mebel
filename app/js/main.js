@@ -215,14 +215,14 @@ window.addEventListener('DOMContentLoaded', () => {
   };
   rangeSliderForPrice();
 
-  const toggleFullSidebox = () => {
-    const filters = document.querySelectorAll('.filter-box');
+  const toggleFullSidebox = (accordion, accordionContent) => {
+    const filters = document.querySelectorAll(accordion);
 
     filters.forEach(el => {
       el.addEventListener('click', e => {
         const target = e.currentTarget;
-        const content = target.querySelector('.filter-box__drop');
-        
+        const content = target.querySelector(accordionContent);
+
         target.classList.toggle('active');
 
         if (target.classList.contains('active')) {
@@ -233,7 +233,8 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     });
   };
-  toggleFullSidebox();
+  toggleFullSidebox('.filter-box', '.filter-box__drop');
+  toggleFullSidebox('.process-box', '.process-box__list');
 
   const togglePopup = (popup, popupBtn) => {
     const popupParentEl = document.querySelector(popup);
@@ -246,4 +247,12 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
   togglePopup('.catalog__search', '.filter-actions__btn--search');
+
+
+  // 
+  (function toggleSelect() {
+    $('#select').wSelect();
+  })()
 });
+
+// $('#select').append('<option value="four">four</option>').wSelect('reset');

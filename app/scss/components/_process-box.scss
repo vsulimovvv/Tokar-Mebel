@@ -1,7 +1,29 @@
 .process-box {
   display: grid;
-  grid-template-columns: minmax(auto, 266px) 1fr;
-  gap: 34px;
+  grid-template-columns: minmax(auto, 270px) 1fr;
+  gap: 30px;
+  cursor: pointer;
+
+  &.active {
+    .process-box__list {
+      opacity: 1;
+      max-height: auto;
+    }
+
+    .process-box__name {
+      &::before {
+        transform: rotate(270deg);
+      }
+    }
+  }
+
+  @include breakpointsMaxW($bp-container) {
+    grid-template-columns: minmax(auto, 260px) 1fr;
+  }
+
+  @include breakpointsMaxW($bp-991) {
+    grid-template-columns: 1fr;
+  }
 
   &:not(:last-child) {
     margin-bottom: 60px;
@@ -11,6 +33,17 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    transition: 300ms ease-in;
+
+    @include breakpointsMaxW($bp-991) {
+      max-height: 0;
+      overflow: hidden;
+      will-change: max-height;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
@@ -24,6 +57,8 @@
     border-radius: 0px 40px 0px 0px;
     position: relative;
     height: 240px;
+
+    @include breakpointsMaxW($bp-991) {}
 
     &::after {
       position: absolute;
@@ -59,17 +94,32 @@
       background-color: var(--color-white);
       right: -22px;
       transform: rotate(45deg);
-
     }
 
     &::after {
       top: -26px;
+
+      @include breakpointsMaxW($bp-991) {
+        display: none;
+      }
     }
 
     &::before {
       bottom: -26px;
-    }
 
+      @include breakpointsMaxW($bp-991) {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 17px;
+        width: 10px;
+        height: 10px;
+        transition: 300ms ease;
+
+        @include maskImage(url('../images/sprite.svg#chevron'), cover);
+        background-color: var(--color-white);
+        transform: rotate(90deg);
+      }
+    }
   }
 
   &__text {
@@ -83,7 +133,6 @@
       font-weight: bold;
       font-size: 16px;
       line-height: 24px;
-
       padding-left: 15px;
     }
   }

@@ -107,10 +107,23 @@
         <h2 class="consultation__title section-title">Закажите консультацию, если сомневаетесь</h2>
 
         <form class="consultation__form form-consultation">
-          <label class="consultation__label" for="">
-            <input class="consultation__input" type="number" required name="phone" placeholder="+38 XXX XXX XX XX">
-          </label>
-          <button class="consultation__button btn">Заказать</button>
+          <div class="form-consultation__group">
+
+            <label class="form-consultation__label" for="">
+              <input class="form-consultation__input input-select" type="number" required name="phone"
+                placeholder="+38 XXX XXX XX XX">
+            </label> 
+            
+            <button class="form-consultation__button btn">Заказать</button>
+
+            <div class="form-consultation__select">
+              <select class="select" name="select-1" id="select">
+                <option value="US" data-icon="./images/us.png"></option>
+                <option value="FR" data-icon="./images/fr.png"></option>
+              </select>
+            </div>
+
+          </div>
         </form>
 
         <div class="consultation__text">
@@ -118,9 +131,7 @@
         </div>
       </div>
 
-      <div class="consultation__preview">
-        <img src="images/content/consultation/1.jpg" alt="">
-      </div>
+      <div class="consultation__preview"></div>
     </div>
 
 
