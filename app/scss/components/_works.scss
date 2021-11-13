@@ -2,12 +2,124 @@
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    gap: 30px 35px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 20px;
+    }
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 20px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__top {
+    margin-bottom: 20px;
   }
 
   &__item {
+    min-height: 430px;
+
     &--big {
       grid-column: 2/4;
+
+      .product-card--work {
+        max-width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: minmax(auto, 200px) 1fr;
+        gap: 50px;
+        align-items: center;
+        padding: 5px;
+        padding-left: 35px;
+
+        .product-card__img {
+          order: 1;
+          max-width: 100%;
+          height: 100%;
+          margin-bottom: 0;
+        }
+
+        .product-card__name {
+          margin-bottom: 15px;
+        }
+
+        .product-card__bottom {
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+        }
+
+        .product-card__btn {
+          order: 1;
+          width: 100%;
+        }
+
+        .product-card__detail--area {
+          margin-left: 0;
+          margin-bottom: 25px;
+        }
+
+        .product-card__info {
+          padding: 0;
+        }
+
+      }
+
+      @include breakpointsMaxW($bp-container) {
+        grid-column: initial;
+
+        .product-card--work {
+          max-width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding-left: 0;
+          padding: 5px;
+
+          .product-card__img {
+            order: initial;
+            height: 250px;
+            margin-bottom: 0;
+          }
+
+          .product-card__name {
+            margin-bottom: 15px;
+          }
+
+          .product-card__info {
+            padding-left: 15px;
+          }
+
+          .product-card__bottom {
+            flex-direction: row;
+            align-items: center;
+            width: calc(100% - 13px);
+          }
+
+          .product-card__btn {
+            order: initial;
+            width: 200px;
+          }
+
+          .product-card__detail--area {
+            padding-left: 30px;
+            height: 100%;
+            margin-bottom: 0;
+            margin-left: auto;
+            width: 76px;
+          }
+        }
+      }
     }
   }
 }

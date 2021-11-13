@@ -1,4 +1,5 @@
 .consultation {
+  min-height: 330px;
 
   &:hover {
     .consultation__preview {
@@ -12,17 +13,22 @@
 
   &__wrapper {
     padding: 5px;
-    padding-left: 80px;
     background-color: var(--color-bg);
 
     display: grid;
-    grid-template-columns: minmax(auto, 605px) 1fr;
+    grid-template-columns: 1fr minmax(auto, 420px);
     gap: 60px;
-  }
 
-  &__offer {
-    padding-top: 55px;
-    padding-bottom: 55px;
+    @include breakpointsMaxW($bp-container) {
+      gap: 30px;
+      grid-template-columns: 1fr minmax(auto, 350px);
+    }
+
+    @include breakpointsMaxW($bp-991) {}
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__title {
@@ -34,7 +40,6 @@
   }
 
   &__preview {
-    max-width: 420px;
     width: 100%;
     height: 300px;
     filter: grayscale(50%);
@@ -42,6 +47,11 @@
 
     @include radius-top-bottom(36px);
     @include backgroundImage(url('../images/content/consultation/1.jpg'), cover);
+
+    @include breakpointsMaxW($bp-container) {
+      height: calc(200px + (300 - 200) * ((100vw - 320px) / (1225 - 320)));
+      align-self: center;
+    }
   }
 
   &__text {
@@ -55,10 +65,37 @@
   }
 
   &__form {
-    height: 58px;
-    margin-bottom: 30px;
-    max-width: 605px;
+    padding: 55px;
+    padding-right: 0;
+
+    @include breakpointsMaxW($bp-991) {
+      padding: 15px;
+    }
+
+    .form-consultation__group {
+      @include breakpointsMaxW($bp-991) {
+        flex-direction: column;
+      }
+    }
+
+    .form-consultation__button {
+      @include breakpointsMaxW($bp-991) {
+        width: 100%;
+      }
+    }
+
+    .form-consultation__input {
+      @include breakpointsMaxW($bp-991) {
+        width: 100%;
+      }
+    }
+
+    .form-consultation__label {
+      @include breakpointsMaxW($bp-991) {
+        margin-bottom: 10px;
+      }
+    }
+
+
   }
-
-
 }

@@ -49,6 +49,8 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   });
 
+
+
   const sliderGroup = () => {
     const sliderRec = document.querySelector('.articles__slider');
     const nextBtn = document.querySelector('.arrow-next');
@@ -256,3 +258,29 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // $('#select').append('<option value="four">four</option>').wSelect('reset');
+
+const sliderGrid = new Swiper(".photos-cases__slider", {
+  slidesPerGroup: 2,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    type: 'fraction',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+      slidesPerGroup: 2,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      slidesPerGroup: 2,
+    },
+    991: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      slidesPerGroup: 2,
+    }
+  }
+});

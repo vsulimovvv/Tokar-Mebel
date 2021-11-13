@@ -284,62 +284,76 @@
   }
 
   &--work {
+    max-width: 100%;
+    max-height: 420px;
+    transition: 350ms ease;
     position: relative;
+    padding: 5px;
+    @include radius-top-bottom(36px);
 
     .product-card__name {
       font-size: 20px;
       line-height: 26px;
+      margin-bottom: 32px;
     }
 
     .product-card__info {
       padding-left: 15px;
+      padding-bottom: 25px;
+      width: 100%;
     }
 
+    .product-card__bottom {
+      display: flex;
+      align-items: center;
+      width: calc(100% - 13px);
+    }
 
-    // .product-card__details {
-    //   display: flex;
-    //   align-items: center;
-    //   margin-bottom: 17px;
-    //   padding-left: 5px;
-    //   justify-content: space-between;
-    // }
+    .product-card__img {
+      height: 250px;
+      margin-bottom: 32px;
+      max-width: 100%;
 
-    // .product-card__detail {
-    //   padding-left: 38px;
-    //   position: relative;
-    //   width: 89px;
-    //   height: 32px;
-    //   display: flex;
-    //   align-items: center;
+      img {
+        @include radius-top-bottom(36px);
+      }
+    }
 
-    //   &::after {
-    //     position: absolute;
-    //     content: '';
-    //     width: 32px;
-    //     height: 32px;
-    //     left: 0;
-    //     top: 50%;
-    //     transform: translateY(-50%);
-    //     background-repeat: no-repeat;
-    //     background-size: cover;
-    //     background-position: center;
-    //   }
+    .product-card__btn {
+      width: 200px;
 
-    //   &--perimeter {
-    //     margin-right: 23px;
+      @include breakpointsMaxW($bp-768) {
+        width: 150px;
+      }
+    }
 
-    //     &::after {
-    //       background-image: url('../images/icons/area.svg');
+    .product-card__detail--area {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 24px;
+      margin-left: auto;
+      position: relative;
+      width: 76px;
+      padding-left: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
 
-    //     }
-    //   }
+      &::after {
+        position: absolute;
+        content: '';
+        width: 32px;
+        height: 32px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
 
-    //   &--area {
-    //     &::after {
-    //       background-image: url('../images/icons/area.svg');
-    //     }
-    //   }
-    // }
 
+        background-image: url('../images/icons/area.svg');
+      }
+    }
   }
 }

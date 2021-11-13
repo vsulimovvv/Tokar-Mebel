@@ -7,6 +7,10 @@
 
   &__slider {
     margin-bottom: 60px;
+
+    @include breakpointsMaxW($bp-768) {
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
@@ -15,20 +19,72 @@
 
   &__cost-box {
     position: absolute;
+    left: 0;
     bottom: 0;
     max-width: 370px;
     max-height: 290px;
+
+    @include breakpointsMaxW($bp-container) {
+      position: initial;
+    }
   }
 
   &__bottom {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 737px);
     width: 100%;
+    height: auto;
 
+    @include breakpointsMaxW($bp-container) {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__form {
-    max-width: 737px;
+    grid-column: 2/3;
+
+    @include breakpointsMaxW($bp-container) {
+      grid-column: initial;
+    }
+
+    @include breakpointsMaxW($bp-container) {
+      .form-consultation__group {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .form-consultation__button {
+        width: 100%;
+      }
+
+      .form-consultation__label {
+        margin-bottom: 30px;
+      }
+
+      .form-consultation__input {
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      .form-consultation__group {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .form-consultation__button {
+        width: 100%;
+      }
+
+      .form-consultation__label {
+        margin-bottom: 30px;
+      }
+    }
   }
 }

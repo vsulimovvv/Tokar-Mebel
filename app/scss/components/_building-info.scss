@@ -1,6 +1,10 @@
 .building-info {
   &:not(:last-child) {
     margin-bottom: 145px;
+
+    @include breakpointsMaxW($bp-container) {
+      margin-bottom: calc(50px + (145 - 50) * ((100vw - 320px) / (1225 - 320)));
+    }
   }
 
   &--two-box {
@@ -8,6 +12,11 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 40px;
+
+      @include breakpointsMaxW($bp-991) {
+        gap: 20px;
+        grid-template-columns: 1fr;
+      }
     }
   }
 
@@ -16,6 +25,66 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 40px;
+
+      @include breakpointsMaxW($bp-991) {
+        gap: 20px;
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+.info-box {
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__preview {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+
+
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -75%;
+      z-index: 2;
+      display: block;
+      content: '';
+      width: 50%;
+      height: 100%;
+
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+      transform: skewX(-25deg);
+    }
+
+    @include radius-top-bottom(40px);
+
+    &:hover {
+      &::before {
+        animation: circle .75s;
+      }
+    }
+
+    @include breakpointsMaxW($bp-container) {
+      height: calc(160px + (300 - 160) * ((100vw - 320px) / (1225 - 320)));
+    }
+
+    &--300 {
+      height: 570px;
+
+      @include breakpointsMaxW($bp-container) {
+        height: calc(300px + (570 - 300) * ((100vw - 320px) / (1225 - 320)));
+      }
+    }
+
+    img {
+      transition: 350ms ease-in;
+
+      @include img();
     }
   }
 }

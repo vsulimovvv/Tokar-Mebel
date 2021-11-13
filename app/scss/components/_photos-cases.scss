@@ -1,0 +1,37 @@
+.photos-cases {
+  &__slider {
+    height: auto;
+  }
+
+  &__slide {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+
+    @include breakpointsMaxW($bp-991) {
+      gap: 20px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      gap: 10px;
+    }
+  }
+
+  &__photo {
+    height: 270px;
+
+    @include breakpointsMaxW($bp-container) {
+      height: calc(140px + (270 - 140) * ((100vw - 320px) / (1225 - 320)));
+    }
+
+    img {
+      @include img();
+      @include radius-top-bottom(40px);
+
+      @include breakpointsMaxW($bp-768) {
+        @include radius-top-bottom(20px);
+      }
+    }
+
+  }
+}
