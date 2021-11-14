@@ -253,9 +253,39 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   // 
-  (function toggleSelect() {
-    $('#select').wSelect();
-  })()
+  // (function toggleSelect() {
+  //   $('#select').wSelect();
+  // })()
+
+
+  const showMenu = () => {
+    const menuBtn = document.querySelector('.toggle-menu');
+    const menu = document.querySelector('.header__bottom');
+    const body = document.querySelector('body');
+    // const overlay = document.querySelector('.overlay');
+    const closeBtn = document.querySelector('.header__bottom-close');
+
+    menuBtn.addEventListener('click', e => {
+      menu.classList.toggle('active');
+      // menuBtn.classList.toggle('active');
+      // overlay.classList.toggle('active');
+      body.classList.toggle('no-scroll');
+    });
+
+    // overlay.addEventListener('click', e => {
+      // menu.classList.remove('active');
+      // menuBtn.classList.remove('active');
+      // overlay.classList.remove('active');
+      // body.classList.remove('no-scroll');
+    // });
+    closeBtn.addEventListener('click', e => {
+      menu.classList.remove('active');
+      menuBtn.classList.remove('active');
+      // overlay.classList.remove('active');
+      body.classList.remove('no-scroll');
+    });
+  };
+  showMenu();
 });
 
 // $('#select').append('<option value="four">four</option>').wSelect('reset');

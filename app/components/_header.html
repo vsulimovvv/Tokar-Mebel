@@ -3,11 +3,11 @@
     <nav class="header__wrapper">
       <div class="header__top">
 
-        <button class="toggle-menu">
-
+        <button class="toggle-menu" type="button" aria-label="Открыть меню">
+          <span class="toggle__line"></span>
         </button>
 
-        <a class="header__logo logo" href="#">
+        <a class="header__logo" href="#">
           <picture>
             <source srcset="images/content/header/logo-mobile.png" media="(max-width: 991px)">
             <img src="images/content/header/logo-desktop.png" alt="Логотип">
@@ -46,42 +46,134 @@
             <option value="2">2</option>
           </select>
         </div>
-        
+
         <div class="header__phone-icon">
           <div class="phone-icon"></div>
         </div>
       </div>
 
       <div class="header__bottom">
-        <div class="main-menu">
-          <div class="menu-accent">
-            <ul class="menu-accent__list">
-              <li class="menu-accent__item">
-                <a class="menu-accent__link" href="#">Жилое</a>
-              </li>
-              <li class="menu-accent__item">
-                <a class="menu-accent__link" href="#">Коммерческое</a>
-              </li>
-              <li class="menu-accent__item">
-                <a class="menu-accent__link" href="#">Садовое</a>
-              </li>
-            </ul>
-          </div>
+        <div class="header__bottom-top">
+          <h3 class="header__bottom-title">Меню</h3>
+          <button class="header__bottom-close">
+            <svg>
+              <use xlink:href="images/sprite.svg#close"></use>
+            </svg>
+          </button>
         </div>
 
-        <div class="menu">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link" href="#">О компании</a>
+        <div class="header__left main-menu">
+          <ul class="main-menu__list">
+            <li class="main-menu__item menu-box menu-box--living">
+              <button class="menu-box__top" type="button">
+                Жилое
+              </button>
+              <ul class="menu-box__drop">
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Дома из профилированого бруса</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Дома из оцилиндрованого бруса</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Каркасные дома</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Дома из блока</a>
+                </li>
+              </ul>
             </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Наши работы</a>
+            <li class="main-menu__item menu-box menu-box--commercial">
+              <button class="menu-box__top" type="button">
+                Коммерческое
+              </button>
+              <ul class="menu-box__drop">
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Базы отдыха</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Гостинницы</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Рестораны</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Кафе</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Магазины</a>
+                </li>
+              </ul>
             </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Контакты</a>
+            <li class="main-menu__item menu-box menu-box--garden">
+              <button class="menu-box__top top" type="button">
+                Садовое
+              </button>
+              <ul class="menu-box__drop">
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Деревянные бани</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Беседки</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Альтанки</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Детские игровые площадки</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Гаражи</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Деревянные детские домики</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Мангальные зоны и барбекю</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Кухни</a>
+                </li>
+              </ul>
             </li>
           </ul>
+        </div>
 
+        <ul class="submenu">
+          <li class="submenu__item">
+            <a class="submenu__link" href="#">О компании</a>
+          </li>
+          <li class="submenu__item">
+            <a class="submenu__link" href="#">Наши работы</a>
+          </li>
+          <li class="submenu__item">
+            <a class="submenu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+
+        <div class="header__socials socials header__socials--mobile">
+          <p class="socials__text">Связаться напрямую:</p>
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link socials__link--tg" href="#" aria-label="Написать нам в телеграмм"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--wp" href="#" aria-label="Написать нам в ватсап"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--vb" href="#" aria-label="Написать нам в вайбер"></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header__phone phone-box header__phone--mobile">
+          <div class="phone-box__phone">
+            <a href="tel:380671755630">+3 80 (67) 175 56 30</a>
+            <span>с 09:00 до 18:00 (пн-вс)</span>
+          </div>
+          <div class="phone-box__button">
+            <a class="phone-box__btn btn" href="#">Заказать звонок</a>
+          </div>
         </div>
       </div>
     </nav>
