@@ -237,6 +237,7 @@ window.addEventListener('DOMContentLoaded', () => {
   };
   toggleFullSidebox('.filter-box', '.filter-box__drop');
   toggleFullSidebox('.process-box', '.process-box__list');
+  toggleFullSidebox('.menu-box', '.menu-box__drop');
 
   const togglePopup = (popup, popupBtn) => {
     const popupParentEl = document.querySelector(popup);

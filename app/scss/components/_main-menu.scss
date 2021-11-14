@@ -1,16 +1,118 @@
 .main-menu {
   max-width: 620px;
-  width: 100%;
 
-  &__schedule {
-    width: 100%;
-    display: grid;
-    grid-template-columns: minmax(auto, 185px) minmax(auto, 150px) minmax(auto, 195px);
-    gap: 50px;
-    justify-content: space-between;
+  @include breakpointsMaxW($bp-container) {
+    max-width: 100%;
+  }
 
-    @include breakpointsMaxW($bp-768) {
-      display: none;
+  &__list {
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+
+    @include breakpointsMaxW($bp-container) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    width: auto;
+  }
+}
+
+.menu-box {
+  transition: 300ms;
+
+  @include breakpointsMaxW($bp-container) {
+    &:not(:last-child) {
+      // margin-bottom: 15px;
+    }
+  }
+
+  &.active {
+    .menu-box__drop {
+      opacity: 1;
+      max-height: 100px;
+    }
+
+    .menu-box__top {
+      border-bottom-color: transparent;
+
+      &::after,
+      &::before {
+        transform: translateY(-50%) rotate(270deg);
+      }
+    }
+  }
+
+  &__top {
+    display: block;
+    padding: 25px 62px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.45;
+    letter-spacing: 0.08em;
+    color: var(--color-white);
+    background-color: #3D1E19;
+    box-shadow: 0px 0px 20px rgba(43, 42, 40, 0.1);
+    margin-bottom: 40px;
+    position: relative;
+
+    @include breakpointsMaxW($bp-container) {
+      width: 100%;
+      background-color: transparent;
+      box-shadow: none;
+      border-top: 1px solid var(--color-accent);
+      border-bottom: 1px solid var(--color-accent);
+      color: var(--color-dark);
+      margin-bottom: 0;
+    }
+
+    &::after {
+      @include pseudoElDefault();
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background-color: var(--color-white);
+    }
+
+    @include breakpointsMaxW($bp-container) {
+
+      &::before {
+        @include pseudoElDefault();
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+      }
+
+      &::after {
+        right: initial;
+        left: 0;
+      }
+
+      &::after,
+      &::before {
+        transition: 200ms ease;
+        height: 11px;
+        width: 11px;
+        @include backgroundImage(url('../images/icons/chevron.svg'), cover);
+        transform: translateY(-50%) rotate(90deg);
+      }
+    }
+  }
+
+  &__drop {
+    will-change: max-height;
+    transition: 300ms ease-in;
+
+    @include breakpointsMaxW($bp-container) {
+      text-align: center;
+      margin: 0 auto;
+
+      max-height: 0;
+      overflow: hidden;
     }
   }
 
@@ -26,131 +128,72 @@
     line-height: 22px;
   }
 
-
-  @include breakpointsMaxW($bp-768) {
-    max-width: 100%;
-  }
-}
-
-.menu-accent {
-  max-width: 620px;
-  margin-bottom: 40px;
-
-  box-shadow: 0px 0px 20px rgba(43, 42, 40, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-
-  @include breakpointsMaxW($bp-768) {
-    max-width: 100%;
-    box-shadow: none;
-    margin-bottom: 0;
-  }
-
-  &__list {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-
-    @include breakpointsMaxW($bp-768) {
-      flex-direction: column;
+  &--living {
+    .menu-box__drop {
+      max-width: 185px;
     }
   }
 
-  &__item {
-    position: relative;
+  &--commercial {
+    .menu-box__drop {
+      max-width: 140px;
+      margin: 0 auto;
+    }
+  }
 
-    &::after {
-      position: absolute;
-      content: '';
-      width: 1px;
-      height: 52px;
-      background-color: #999;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
+  &--garden {
+    .menu-box__drop {
+      max-width: 195px;
+    }
+  }
+}
+
+.top {}
+
+.submenu {
+  display: flex;
+  align-items: center;
+
+  @include breakpointsMaxW($bp-container) {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__item {
+    text-align: center;
+
+
+    @include breakpointsMaxW($bp-container) {}
+
+    @include breakpointsMaxW($bp-container) {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+
+      width: 100%;
     }
   }
 
   &__link {
     display: block;
-    padding: 25px 60px;
-    background-color: var(--color-brown);
-    color: var(--color-white);
-
     font-weight: bold;
     font-size: 16px;
-    line-height: 1.4;
+    line-height: 1.45;
     letter-spacing: 0.08em;
+    color: var(--color-dark);
+    position: relative;
 
-    @include breakpointsMaxW($bp-768) {
-      padding: 15px 0;
-      text-align: center;
-      background-color: transparent;
-      color: var(--color-dark);
-      border-bottom: 1px solid #E6D8C7;
-      border-top: 1px solid #E6D8C7;
-    }
-  }
-}
-
-.menu {
-  display: flex;
-  align-items: center;
-  height: 72px;
-  margin-bottom: 32px;
-
-  @include breakpointsMaxW($bp-768) {
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-  }
-
-  &__list {
-    display: flex;
-    max-width: 277px;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 50px;
-
-    @include breakpointsMaxW($bp-768) {
-      flex-direction: column;
-      max-width: 100%;
-      margin-right: 0;
-      margin-bottom: 27px;
-    }
-  }
-
-  &__item {
-    width: 100%;
-  }
-
-  &__link {
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 1.4;
-    letter-spacing: 0.08em;
-
-    @include breakpointsMaxW($bp-768) {
-      display: block;
-      padding: 15px 0;
-      text-align: center;
-      background-color: transparent;
-      color: var(--color-dark);
-      border-bottom: 1px solid #E6D8C7;
-      border-top: 1px solid #E6D8C7;
-      max-width: 100%;
+    @include breakpointsMaxW($bp-container) {
+      padding: 25px 62px;
+      color: var(--color-white);
+      background-color: #3D1E19;
       width: 100%;
-    }
-  }
-
-  &__btn {
-    margin-left: auto;
-    flex-shrink: 0;
-
-    @include breakpointsMaxW($bp-768) {
-      margin-left: 0;
-     order: 3;
+      background-color: transparent;
+      box-shadow: none;
+      border-top: 1px solid var(--color-accent);
+      border-bottom: 1px solid var(--color-accent);
+      color: var(--color-dark);
+      margin-bottom: 0;
     }
   }
 }
