@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tokar Mebel</title>
+
+  <!-- nouislider -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/content/header/logo-mobile.png" type="image/x-icon">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Custom Link -->
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <!-- @include('./components/_header.html') -->
+  <div class="main">
+    <div class="filter-actions">
+      <button class="filter-actions__btn filter-actions__btn--filter">
+        <svg>
+          <use xlink:href="images/sprite.svg#filter-icon"></use>
+        </svg>
+      </button>
+      <button class="filter-actions__btn filter-actions__btn--search">
+        <svg>
+          <use xlink:href="images/sprite.svg#search-icon"></use>
+        </svg></button>
+    </div>
+
+
+
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__lint" href="#">Главная страница</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__lint" href="#">Жилое</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    @include('./components/_catalog.html')
+  </div>
+  <!-- @include('./components/_footer.html') -->
+
+  <!-- nouislider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- JS -->
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
