@@ -98,13 +98,13 @@
     </div>
 
     <div class="contacts__inner">
-      <address class="contacts__col">
+      <div class="contacts__col">
         <h3 class="contacts__caption">Связаться с компанией TokarMebel вы сможете с помощью одного из этих способов:
         </h3>
         <ul class="contacts__list">
           <li class="contacts__item">
-            <article class="contacts__box box-contacts box-contacts--telephones">
-              <h3 class="box-contacts__title">Телефоны:</h3>
+            <div class="contacts__box box-contacts box-contacts--telephones">
+              <h4 class="box-contacts__title">Телефоны:</h4>
 
               <p class="box-contacts__text">Отдел продаж:
                 <a class="box-contacts__strong" href="tel:380981885566">+38 (098) 188 55 66</a>
@@ -113,11 +113,11 @@
                 <a class="box-contacts__strong" href="tel:380687043777">+38 (068) 704 37 77</a>
               </p>
               <a class="box-contacts__link" href="#">Позвонить компании</a>
-            </article>
+            </div>
           </li>
           <li class="contacts__item">
-            <article class="contacts__box box-contacts box-contacts--mail">
-              <h3 class="box-contacts__title">Почта:</h3>
+            <div class="contacts__box box-contacts box-contacts--mail">
+              <h4 class="box-contacts__title">Почта:</h4>
 
               <p class="box-contacts__text">Отдел продаж:
                 <a class="box-contacts__strong" href="mailto:sales.tokarmebel@gmail.com">sales.tokarmebel@gmail.com</a>
@@ -127,11 +127,11 @@
                   href="mailto:logistics.tokarmebel@gmail.com">logistics.tokarmebel@gmail.com</a>
               </p>
               <a class="box-contacts__link" href="#">Написать на почту (отвечаем ...)</a>
-            </article>
+            </div>
           </li>
           <li class="contacts__item">
-            <article class="contacts__box box-contacts box-contacts--schedule">
-              <h3 class="box-contacts__title">График работы:</h3>
+            <div class="contacts__box box-contacts box-contacts--schedule">
+              <h4 class="box-contacts__title">График работы:</h4>
 
               <p class="box-contacts__text">Пн. - Пт.:
                 <span class="box-contacts__strong">с 9:00 до 18:00</span>
@@ -140,11 +140,11 @@
                 <span class="box-contacts__strong">Выходной</span>
               </p>
               <a class="box-contacts__link" href="#">Позвонить компании</a>
-            </article>
+            </div>
           </li>
           <li class="contacts__item">
-            <article class="contacts__box box-contacts box-contacts--messengers">
-              <h3 class="box-contacts__title">Мессенджеры:</h3>
+            <div class="contacts__box box-contacts box-contacts--messengers">
+              <h4 class="box-contacts__title">Мессенджеры:</h4>
 
               <div class="socials">
                 <ul class="socials__list">
@@ -160,22 +160,20 @@
                 </ul>
               </div>
               <a class="box-contacts__link" href="#">Написать в соцсети (отвечаем ...)</a>
-            </article>
+            </div>
           </li>
           <li class="contacts__item">
-            <article class="contacts__box box-contacts box-contacts--address">
-              <h3 class="box-contacts__title">Компания TokarMabel находится по адресу:</h3>
+            <div class="contacts__box box-contacts box-contacts--address">
+              <h4 class="box-contacts__title">Компания TokarMabel находится по адресу:</h4>
 
-              <address>
+              <address class="contacts__address">
                 <span class="box-contacts__strong">Украина, Тячевский район. г. Тячев, ТЦ "Стиль"</span>
                 <a class="box-contacts__link" href="#">Проложить маршрут</a>
               </address>
-            </article>
+            </div>
           </li>
-
         </ul>
-
-      </address>
+      </div>
 
       <div class="contacts__col">
         <form class="contacts__form form-contacts">
@@ -183,27 +181,26 @@
 
           <div class="form-contacts__inputs">
             <div class="form-contacts__group">
-              <label for="">
-                <input class="form-contacts__input" type="text" placeholder="Введите имя">
+              <label>
+                <input class="form-contacts__input" type="text" placeholder="Введите имя" name="name" required>
               </label>
             </div>
             <div class="form-contacts__group">
-              <label for="">
-                <input class="form-contacts__input" type="text" placeholder="+38 XXX XXX XX XX">
+              <label>
+                <input class="form-contacts__input" type="tel" placeholder="+38 XXX XXX XX XX" name="tel" required>
               </label>
             </div>
           </div>
 
-          <button class="form-contacts__btn btn">Получить точный расчет</button>
+          <button class="form-contacts__btn btn" type="submit">Получить точный расчет</button>
 
-          <p class="form-contacts__offer offer">Отправляя данные, Вы соглашаетесь на обработку <a href="#">персональных
-              данных</a></p>
+          <p class="form-contacts__offer offer">Отправляя данные, Вы соглашаетесь на обработку <a href="#">персональных данных</a></p>
         </form>
 
         <div class="contacts__map map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2668.9705427840545!2d23.564069815523403!3d48.01427897921379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47379194cefe55e7%3A0xe58799f0eaa174a2!2z0KHQotCY0JvQrCDQvNC10LHQu9GW0LI!5e0!3m2!1sru!2sru!4v1636560436386!5m2!1sru!2sru"
-            width="auto" height="800" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            width="600" height="800" style="border:0;" loading="lazy"></iframe>
         </div>
       </div>
     </div>

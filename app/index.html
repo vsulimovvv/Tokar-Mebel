@@ -3,18 +3,18 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Favicon -->
+ <link rel="shortcut icon" href="images/content/header/logo-mobile.png" type="image/x-icon">
+
+ <!-- Link Swiper's CSS -->
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+ <!-- Custom Link -->
+ <link rel="stylesheet" href="css/style.min.css">
+  
   <title>Tokar Mebel</title>
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="images/content/header/logo-mobile.png" type="image/x-icon">
-
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-  <!-- Custom Link -->
-  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -61,21 +61,21 @@
         </div>
 
         <div class="header__select">
-          <select name="" id="">
+          <select name="select" id="select1">
             <option value="1">1</option>
             <option value="2">2</option>
           </select>
         </div>
 
         <div class="header__phone-icon">
-          <div class="phone-icon"></div>
+          <a class="phone-icon" href="tel:99999"></a>
         </div>
       </div>
 
       <div class="header__bottom">
         <div class="header__bottom-top">
           <h3 class="header__bottom-title">Меню</h3>
-          <button class="header__bottom-close">
+          <button class="header__bottom-close" type="button" aria-label="Закрыть меню">
             <svg>
               <use xlink:href="images/sprite.svg#close"></use>
             </svg>
@@ -85,9 +85,7 @@
         <div class="header__left main-menu">
           <ul class="main-menu__list">
             <li class="main-menu__item menu-box menu-box--living">
-              <button class="menu-box__top" type="button">
-                Жилое
-              </button>
+              <button class="menu-box__top" type="button">Жилое</button>
               <ul class="menu-box__drop">
                 <li class="menu-box__item">
                   <a class="menu-box__link" href="#">Дома из профилированого бруса</a>
@@ -104,9 +102,7 @@
               </ul>
             </li>
             <li class="main-menu__item menu-box menu-box--commercial">
-              <button class="menu-box__top" type="button">
-                Коммерческое
-              </button>
+              <button class="menu-box__top" type="button">Коммерческое</button>
               <ul class="menu-box__drop">
                 <li class="menu-box__item">
                   <a class="menu-box__link" href="#">Базы отдыха</a>
@@ -126,9 +122,7 @@
               </ul>
             </li>
             <li class="main-menu__item menu-box menu-box--garden">
-              <button class="menu-box__top top" type="button">
-                Садовое
-              </button>
+              <button class="menu-box__top top" type="button">Садовое</button>
               <ul class="menu-box__drop">
                 <li class="menu-box__item">
                   <a class="menu-box__link" href="#">Деревянные бани</a>
@@ -199,13 +193,14 @@
     </nav>
   </div>
 </header>
+
   <div class="main">
     <section class="hero">
   <div class="container">
 
     <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide hero__wrapper">
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide hero__wrapper">
           <div class="hero__offer">
             <h2 class="hero__title">Производим и устанавливаем строения разных видов
               <br> в Украине</h2>
@@ -216,14 +211,14 @@
               </p>
             </div>
             <div class="hero__actions">
-              <button class="hero__btn btn">Перейти в каталог домов</button>
-              <button class="btn btn--nobg">Каталог бань</button>
+              <a class="hero__btn btn" href="#">Перейти в каталог домов</a>
+              <a class="btn btn--nobg" href="#">Каталог бань</a>
             </div>
           </div>
 
-          <div class="hero__preview"></div>
-        </div>
-        <div class="swiper-slide hero__wrapper">
+          <div class="hero__preview" aria-label="Картинка слайда"></div>
+        </li>
+        <li class="swiper-slide hero__wrapper">
           <div class="hero__offer">
             <h2 class="hero__title">Производим и устанавливаем строения разных видов
               <br> в Украине</h2>
@@ -234,17 +229,17 @@
               </p>
             </div>
             <div class="hero__actions">
-              <button class="hero__btn btn">Перейти в каталог домов</button>
-              <button class="btn btn--nobg">Каталог бань</button>
+              <a class="hero__btn btn" href="#">Перейти в каталог домов</a>
+              <a class="btn btn--nobg" href="#">Каталог бань</a>
             </div>
           </div>
 
-          <div class="hero__preview"></div>
-        </div>
-      </div>
+          <div class="hero__preview" aria-label="Картинка слайда"></div>
+        </li>
+      </ul>
       <div class="navigation">
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <button class="swiper-button-next" type="button" aria-label="Перейти на следующий слайд"></button>
+        <button class="swiper-button-prev" type="button" aria-label="Перейти на предыдущий слайд"></button>
         <div class="swiper-pagination"></div>
       </div>
     </div>
@@ -294,9 +289,9 @@
               <img src="https://images.unsplash.com/photo-1636541465326-da79f6b98f9c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1331&q=80" alt="Жилое">
             </div>
             <div class="product-card__info">
-              <span class="product-card__name card-name">Жилое</span>
+              <h3 class="product-card__name card-name">Жилое</h3>
               <p class="product-card__text">Раздел с домами, дачами, коттеджами, виллами, усадьбами и особняками</p>
-              <button class="btn btn--nobg">Ознакомиться с проектами</button>
+              <a class="btn btn--nobg" href="#">Ознакомиться с проектами</a>
             </div>
           </article>
         </li>
@@ -306,9 +301,9 @@
               <img src="images/content/products/p-2.jpg" alt="Жилое">
             </div>
             <div class="product-card__info">
-              <span class="product-card__name card-name">Коммерческое</span>
+              <h3 class="product-card__name card-name">Коммерческое</h3>
               <p class="product-card__text">Раздел с базами отдыха, гостиницами, ресторанами, кафе и магазинами</p>
-              <button class="btn btn--nobg">Ознакомиться с проектами</button>
+              <a class="btn btn--nobg" href="#">Ознакомиться с проектами</a>
             </div>
           </article>
         </li>
@@ -318,9 +313,9 @@
               <img src="https://images.unsplash.com/photo-1636541465326-da79f6b98f9c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1331&q=80" alt="Жилое">
             </div>
             <div class="product-card__info">
-              <span class="product-card__name card-name">Садовое</span>
+              <h3 class="product-card__name card-name">Садовое</h3>
               <p class="product-card__text">Раздел с банями, беседками, альтанками, гаражами, кухнями, площадками, мангальными зонами и барбекю</p>
-              <button class="btn btn--nobg">Ознакомиться с проектами</button>
+              <a class="btn btn--nobg" href="#">Ознакомиться с проектами</a>
             </div>
           </article>
         </li>
@@ -378,47 +373,49 @@
       <div class="production__preview swiper production-slider">
         <ul class="production-slider__wrapper">
           <li class="production-slider__slide">
-            <img src="https://images.unsplash.com/photo-1577874536010-dd2073a8ab8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1434&q=80" alt="">
+            <img
+              src="https://images.unsplash.com/photo-1577874536010-dd2073a8ab8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1434&q=80"
+              alt="Слайд №1">
           </li>
           <li class="production-slider__slide">
-            <img src="images/content/production/slider/1.jpg" alt="">
+            <img src="images/content/production/slider/1.jpg" alt="Слайд №2">
           </li>
           <li class="production-slider__slide">
-            <img src="images/content/production/slider/1.jpg" alt="">
+            <img src="images/content/production/slider/1.jpg" alt="Слайд №3">
           </li>
           <li class="production-slider__slide">
-            <img src="images/content/production/slider/1.jpg" alt="">
+            <img src="images/content/production/slider/1.jpg" alt="Слайд №4">
           </li>
           <li class="production-slider__slide">
-            <img src="images/content/production/slider/1.jpg" alt="">
+            <img src="images/content/production/slider/1.jpg" alt="Слайд №5">
           </li>
         </ul>
         <div class="navigation">
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <button class="swiper-button-next" type="button" aria-label="Перейти на следующую вкладку"></button>
+          <button class="swiper-button-prev" type="button" aria-label="Перейти на предыдущую вкладку"></button>
           <div class="swiper-pagination"></div>
         </div>
       </div>
 
       <div class="production__actions actions">
-        <button class="actions__btn btn">Перейти в каталог домов</button>
-        <button class="btn btn--nobg">Каталог бань</button>
+        <a class="actions__btn btn" href="#">Перейти в каталог домов</a>
+        <a class="btn btn--nobg" href="#">Каталог бань</a>
       </div>
     </div>
   </div>
 </section>
     <section class="about">
   <div class="container">
-    <div class="about__title section-title">О компании TokarMebel</div>
+    <h2 class="about__title section-title">О компании TokarMebel</h2>
     <div class="about__wrapper">
       <div class="about__preview">
         <div class="about__owner"></div>
         <div class="about__promo">
-          <button class="play"></button>
+          <button class="play" type="button" aria-label="Запустить видео о компании"></button>
           <p>Посмотреть короткое видео о компании (2:42 мин)</p>
         </div>
         <blockquote class="about__quote quote">
-          <h3 class="quote__name">Точилов Александр Николаевич</h3>
+          <cite class="quote__name">Точилов Александр Николаевич</cite>
           <div class="quote__text">Цитата о компании, пару слов от самого лица компании. Цитата о компании, пару слов от
             самого лица компании. </div>
         </blockquote>
@@ -444,7 +441,7 @@
       </ul>
 
       <div class="about__bottom">
-        <button class="about__button btn btn--big">Подробнее о компании</button>
+        <button class="about__button btn btn--big" type="button">Подробнее о компании</button>
       </div>
     </div>
   </div>
@@ -532,9 +529,7 @@
   <div class="container">
     <div class="articles__wrapper">
       <div class="articles__top">
-        <h2 class="articles__title section-title">
-          Последние статьи
-        </h2>
+        <h2 class="articles__title section-title">Последние статьи</h2>
         <div class="articles__arrows swiper-navigation">
           <button class="articles__arrow articles__arrow--prev arrow-prev" type="button" id="swiperPrev"
             aria-label="Предыдущий слайд">
@@ -562,7 +557,7 @@
               <div class="article__img">
                 <img
                   src="https://images.unsplash.com/photo-1577874536010-dd2073a8ab8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1434&q=80"
-                  alt="">
+                  alt="Загородный дом или самостоятельное строительство?">
               </div>
 
               <h3 class="article__name">Готовый загородный дом или самостоятельное строительство?</h3>
@@ -579,7 +574,8 @@
               </div>
 
               <div class="article__img">
-                <img src="images/content/articles/1.jpg" alt="">
+                <img src="images/content/articles/1.jpg"
+                  alt="Готовый загородный дом или самостоятельное строительство?<">
               </div>
 
               <h3 class="article__name">Готовый загородный дом или самостоятельное строительство?</h3>
@@ -596,7 +592,8 @@
               </div>
 
               <div class="article__img">
-                <img src="images/content/articles/1.jpg" alt="">
+                <img src="images/content/articles/1.jpg"
+                  alt="Готовый загородный дом или самостоятельное строительство?<">
               </div>
 
               <h3 class="article__name">Готовый загородный дом или самостоятельное строительство?</h3>
@@ -613,7 +610,8 @@
               </div>
 
               <div class="article__img">
-                <img src="images/content/articles/1.jpg" alt="">
+                <img src="images/content/articles/1.jpg"
+                  alt="Готовый загородный дом или самостоятельное строительство?<">
               </div>
 
               <h3 class="article__name">Готовый загородный дом или самостоятельное строительство?</h3>
@@ -630,7 +628,8 @@
               </div>
 
               <div class="article__img">
-                <img src="images/content/articles/1.jpg" alt="">
+                <img src="images/content/articles/1.jpg"
+                  alt="Готовый загородный дом или самостоятельное строительство?<">
               </div>
 
               <h3 class="article__name">Готовый загородный дом или самостоятельное строительство?</h3>
@@ -647,7 +646,8 @@
               </div>
 
               <div class="article__img">
-                <img src="images/content/articles/1.jpg" alt="">
+                <img src="images/content/articles/1.jpg"
+                  alt="Готовый загородный дом или самостоятельное строительство?<">
               </div>
 
               <h3 class="article__name">Готовый загородный дом или самостоятельное строительство?</h3>
@@ -666,12 +666,13 @@
         <div class="swiper-pagination"></div>
       </div>
     </div>
+  </div>
 </section>
     <section class="section-default">
   <div class="container">
     <div class="swiper slider-section">
-      <div class="slider-section__wrapper">
-        <div class="slider-section__slide">
+      <ul class="slider-section__wrapper">
+        <li class="slider-section__slide">
           <div class="slider-section__offer">
             <h2 class="slider-section__title section-title">Заголовок текста для СЕО</h2>
 
@@ -696,10 +697,10 @@
           </div>
 
           <div class="slider-section__preview">
-            <img src="images/content/section/1.png" alt="">
+            <img src="images/content/section/1.png" alt="Слайд №1">
           </div>
-        </div>
-        <div class="slider-section__slide">
+        </li>
+        <li class="slider-section__slide">
           <div class="slider-section__offer">
             <h2 class="slider-section__title section-title">Заголовок текста для СЕО</h2>
 
@@ -724,10 +725,10 @@
           </div>
 
           <div class="slider-section__preview">
-            <img src="images/content/section/1.png" alt="">
+            <img src="images/content/section/1.png" alt="Слайд №1">
           </div>
-        </div>
-        <div class="slider-section__slide">
+        </li>
+        <li class="slider-section__slide">
           <div class="slider-section__offer">
             <h2 class="slider-section__title section-title">Заголовок текста для СЕО</h2>
 
@@ -752,10 +753,10 @@
           </div>
 
           <div class="slider-section__preview">
-            <img src="images/content/section/1.png" alt="">
+            <img src="images/content/section/1.png" alt="Слайд №1">
           </div>
-        </div>
-        <div class="slider-section__slide">
+        </li>
+        <li class="slider-section__slide">
           <div class="slider-section__offer">
             <h2 class="slider-section__title section-title">Заголовок текста для СЕО</h2>
 
@@ -780,10 +781,10 @@
           </div>
 
           <div class="slider-section__preview">
-            <img src="images/content/section/1.png" alt="">
+            <img src="images/content/section/1.png" alt="Слайд №1">
           </div>
-        </div>
-        <div class="slider-section__slide">
+        </li>
+        <li class="slider-section__slide">
           <div class="slider-section__offer">
             <h2 class="slider-section__title section-title">Заголовок текста для СЕО</h2>
 
@@ -808,36 +809,34 @@
           </div>
 
           <div class="slider-section__preview">
-            <img src="images/content/section/1.png" alt="">
+            <img src="images/content/section/1.png" alt="Слайд №1">
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
 
       <div class="navigation">
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <button class="swiper-button-next" type="button" aria-label="Перейти на следующий слайд"></button>
+        <button class="swiper-button-prev" type="button" aria-label="Перейти на предыдущий слайд"></button>
         <div class="swiper-pagination"></div>
       </div>
     </div>
   </div>
 </section>
   </div>
-  <footer class="footer">
 
+  <footer class="footer">
   <div class="footer__wrapper">
     <div class="container">
       <div class="footer__body">
 
         <div class="footer__logo footer__logo--mobile">
-          <img src="images/footer-logo-mobile.svg" alt="Лого для мобильных устройств">
+          <img src="images/footer-logo-mobile.svg" alt="Логотип">
         </div>
 
         <div class="footer__left main-menu">
           <ul class="main-menu__list">
             <li class="main-menu__item menu-box menu-box--living">
-              <button class="menu-box__top" type="button">
-                Жилое
-              </button>
+              <button class="menu-box__top" type="button">Жилое</button>
               <ul class="menu-box__drop">
                 <li class="menu-box__item">
                   <a class="menu-box__link" href="#">Дома из профилированого бруса</a>
@@ -854,9 +853,7 @@
               </ul>
             </li>
             <li class="main-menu__item menu-box menu-box--commercial">
-              <button class="menu-box__top" type="button">
-                Коммерческое
-              </button>
+              <button class="menu-box__top" type="button">Коммерческое</button>
               <ul class="menu-box__drop">
                 <li class="menu-box__item">
                   <a class="menu-box__link" href="#">Базы отдыха</a>
@@ -876,9 +873,7 @@
               </ul>
             </li>
             <li class="main-menu__item menu-box menu-box--garden">
-              <button class="menu-box__top top" type="button">
-                Садовое
-              </button>
+              <button class="menu-box__top top" type="button">Садовое</button>
               <ul class="menu-box__drop">
                 <li class="menu-box__item">
                   <a class="menu-box__link" href="#">Деревянные бани</a>
@@ -920,7 +915,7 @@
               </li>
             </ul>
 
-            <button class="footer__btn btn">Заказать звонок</button>
+            <button class="footer__btn btn" type="button">Заказать звонок</button>
           </div>
 
           <div class="footer__logo">
@@ -952,16 +947,13 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
-
-
 </footer>
 
 
-  <!-- Swiper JS -->
+    <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <!--  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
