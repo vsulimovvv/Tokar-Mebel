@@ -2,24 +2,15 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  @include('./components/base/_meta.html')
+  @include('./components/base/_links.html')
+
   <title>Tokar Mebel</title>
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="images/content/header/logo-mobile.png" type="image/x-icon">
-
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-  <!-- Custom Link -->
-  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-  <!-- @include('./components/_header.html') -->
-  <div class="main">
+  @include('./components/_header.html')
+  <main class="main">
     <div class="breadcrumbs">
       <div class="container">
         <ul class="breadcrumbs__list">
@@ -35,21 +26,14 @@
         </ul>
       </div>
     </div>
-    <!-- @include('./components/_hero.html') -->
     @include('./components/_about.html')
     @include('./components/_advantages.html')
     @include('./components/_consultation.html')
     @include('./components/_articles.html')
+  </main>
+  @include('./components/_footer.html')
 
-  </div>
-  <!-- @include('./components/_footer.html') -->
-
-
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-  <!-- JS -->
-  <script src="js/main.min.js"></script>
+  @include('./components/base/_scripts.html')
 </body>
 
 </html>

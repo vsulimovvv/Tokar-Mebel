@@ -2,25 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tokar Mebel</title>
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="images/content/header/logo-mobile.png" type="image/x-icon">
-
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-  <!--  -->
-  <link rel="stylesheet" href="css/wSelect.css">
-  <!-- Custom CSS Link -->
-  <link rel="stylesheet" href="css/style.min.css">
+  @include('./components/base/_meta.html')
+  @include('./components/base/_links.html')
+  
+  <title>Tokar Mebel</title>  
 </head>
 
 <body>
-  <!-- @include('./components/_header.html') -->
-  <div class="main">
+  @include('./components/_header.html')
+  <main class="main">
+    
     <div class="breadcrumbs">
       <div class="container">
         <ul class="breadcrumbs__list">
@@ -40,27 +31,10 @@
     @include('./components/_building-slider-cases.html')
     @include('./components/_cases.html')
     @include('./components/_photos-cases.html')
+  </main>
+  @include('./components/_footer.html')
 
-  </div>
-  <!-- @include('./components/_footer.html') -->
-
-
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-  <!-- wSelect -->
-  <script src="js/wSelect.min.js"></script>
-
-  <!--Verical Slider -->
-  <script src="js/slider-vertical.js"></script>
-
-  <!-- JS -->
-  <script src="js/main.min.js"></script>
+  @include('./components/base/_scripts.html')
 </body>
 
 </html>

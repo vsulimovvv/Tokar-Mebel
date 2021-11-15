@@ -5,7 +5,7 @@
   height: 560px;
 
   min-width: 0;
-  
+
   margin-bottom: 60px;
 
   @include breakpointsMaxW($bp-991) {
@@ -26,9 +26,8 @@
       height: 100%;
 
       img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        @include img();
+        @include radius-top-bottom(40px);
       }
     }
   }
@@ -54,10 +53,10 @@
       }
 
       img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        @include img();
         flex-shrink: 0;
+
+        @include radius-top-bottom(40px);
       }
     }
   }

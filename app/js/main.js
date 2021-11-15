@@ -49,8 +49,6 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-
-
   const sliderGroup = () => {
     const sliderRec = document.querySelector('.articles__slider');
     const nextBtn = document.querySelector('.arrow-next');
@@ -164,45 +162,6 @@ window.addEventListener('DOMContentLoaded', () => {
           item.noUiSlider.set(arr);
         };
 
-        // inputs.forEach((el, index) => {
-        //   el.addEventListener('change', e => {
-        //     setRangeSlider(index, e.currentTarget.value);
-        //   });
-        //   el.addEventListener('input', e => {
-        //     setRangeSlider(index, e.currentTarget.value);
-        //   });
-        // });
-      };
-    });
-
-    rangeSlider2.forEach(item => {
-      if (item) {
-        noUiSlider.create(item, {
-          start: [100000, 2680000],
-          connect: true,
-          step: 1,
-          tooltips: [true, true],
-          range: {
-            'min': [100000],
-            'max': [5000000]
-          }
-        });
-        const input0 = document.getElementById('input-0');
-        const input1 = document.getElementById('input-1');
-
-        const inputs = [input0, input1];
-
-        item.noUiSlider.on('update', function (values, handle) {
-          inputs[handle].value = Math.round(values[handle]);
-        });
-
-        const setRangeSlider = (i, value) => {
-          let arr = [null, null];
-          arr[i] = value;
-
-          item.noUiSlider.set(arr);
-        };
-
         inputs.forEach((el, index) => {
           el.addEventListener('change', e => {
             setRangeSlider(index, e.currentTarget.value);
@@ -213,6 +172,45 @@ window.addEventListener('DOMContentLoaded', () => {
         });
       };
     });
+
+    // rangeSlider2.forEach(item => {
+    //   if (item) {
+    //     noUiSlider.create(item, {
+    //       start: [100000, 2680000],
+    //       connect: true,
+    //       step: 1,
+    //       tooltips: [true, true],
+    //       range: {
+    //         'min': [100000],
+    //         'max': [5000000]
+    //       }
+    //     });
+    //     const input3 = document.getElementById('input-3');
+    //     const input4 = document.getElementById('input-4');
+
+    //     const inputs2 = [input3, input4];
+
+    //     item.noUiSlider.on('update', function (values, handle) {
+    //       inputs2[handle].value = Math.round(values[handle]);
+    //     });
+
+    //     const setRangeSlider = (i, value) => {
+    //       let arr = [null, null];
+    //       arr[i] = value;
+
+    //       item.noUiSlider.set(arr);
+    //     };
+
+    //     inputs2.forEach((el, index) => {
+    //       el.addEventListener('change', e => {
+    //         setRangeSlider(index, e.currentTarget.value);
+    //       });
+    //       el.addEventListener('input', e => {
+    //         setRangeSlider(index, e.currentTarget.value);
+    //       });
+    //     });
+    //   };
+    // });
 
   };
   rangeSliderForPrice();
@@ -252,6 +250,37 @@ window.addEventListener('DOMContentLoaded', () => {
   togglePopup('.catalog__search', '.filter-actions__btn--search');
 
 
+  (function verticalSlider() {
+    const slider = document.querySelector('.slider-main');
+    const sliderNav = document.querySelector('.slider-nav');
+
+    let mySwiperNav = new Swiper('.slider-thumbs__nav', {
+      slidesPerView: 4,
+      spaceBetween: 10,
+      direction: 'horizontal',
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      loopedSlides: 4,
+      freeMode: true,
+
+      breakpoints: {
+        320: {
+          direction: 'horizontal',
+        },
+        991: {
+          direction: 'vertical',
+        }
+      }
+    });
+    let mySwiper = new Swiper('.slider-thumbs__main', {
+      spaceBetween: 10,
+      loopedSlides: 4,
+      thumbs: {
+        swiper: mySwiperNav
+      }
+    });
+  }());
+
   // 
   // (function toggleSelect() {
   //   $('#select').wSelect();
@@ -273,10 +302,10 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     // overlay.addEventListener('click', e => {
-      // menu.classList.remove('active');
-      // menuBtn.classList.remove('active');
-      // overlay.classList.remove('active');
-      // body.classList.remove('no-scroll');
+    // menu.classList.remove('active');
+    // menuBtn.classList.remove('active');
+    // overlay.classList.remove('active');
+    // body.classList.remove('no-scroll');
     // });
     closeBtn.addEventListener('click', e => {
       menu.classList.remove('active');
