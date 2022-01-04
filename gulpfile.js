@@ -43,9 +43,8 @@ function svgSprites() {
     .pipe(dest('app/images'))
 }
 
-
 function fileInclude() {
-  return src('app/html/**/*.html')
+  return src('app/html/*.html')
     .pipe(include({
       prefix: '@',
       basepath: '@file',
@@ -131,9 +130,9 @@ function cleanDist() {
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
-  watch(['app/js**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/**/*.html']).on('change', browserSync.reload);
+  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/html/**/*.html'], fileInclude);
+  watch(['app/**/*.html']).on('change', browserSync.reload);
   watch(['app/images/icons/*.svg'], svgSprites);
 }
 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @include('./components/base/_meta.html')
+  @include('./components/base/_links.html')
+
+  <title>Tokar Mebel</title>
+</head>
+
+<body>
+  @include('./components/_header.html')
+  <main class="main">
+    <div class="filter-actions">
+      <button class="filter-actions__btn filter-actions__btn--filter">
+        <svg>
+          <use xlink:href="images/sprite.svg#filter-icon"></use>
+        </svg>
+      </button>
+      <button class="filter-actions__btn filter-actions__btn--search">
+        <svg>
+          <use xlink:href="images/sprite.svg#search-icon"></use>
+        </svg></button>
+    </div>
+
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__lint" href="#">Главная страница</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__lint" href="#">Жилое</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    @include('./components/_catalog.html')
+  </main>
+  @include('./components/_footer.html')
+
+  @include('./components/base/_scripts.html')
+</body>
+
+</html>

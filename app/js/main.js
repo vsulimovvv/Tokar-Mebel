@@ -1,9 +1,12 @@
 window.addEventListener('DOMContentLoaded', () => {
-  var swiper = new Swiper(".mySwiper", {
+  var swiper = new Swiper(".hero__preview", {
     slidesPerView: 1,
     pagination: {
       el: ".swiper-pagination",
       type: "fraction",
+    },
+    autoplay: {
+      delay: 5000,
     },
     navigation: {
       nextEl: ".swiper-button-next",
@@ -22,9 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
   //   },
   // });
   // 
-  var swiper = new Swiper(".slider-section", {
-    wrapperClass: 'slider-section__wrapper',
-    slideClass: 'slider-section__slide',
+  var swiper = new Swiper(".slider-section__preview", {
     slidesPerView: 'auto',
     pagination: {
       el: ".swiper-pagination",

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @include('./components/base/_meta.html')
+  @include('./components/base/_links.html')
+
+  <title>Tokar Mebel</title>
+</head>
+
+<body>
+  @include('./components/_header.html')
+  <div class="popup popup--product">
+    <div class="popup__container">
+      <div class="popup__top">
+        <h2 class="popup__caption">Вариант ST-56 «Barcelona»</h2>
+      </div>
+
+      <button class="popup__close" type="button" aria-label="Закрыть попап"></button>
+
+      <div class="popup__body">
+        <form class="contacts__form form-contacts">
+          <h3 class="form-contacts__title">Закажите консультацию, если сомневаетесь</h3>
+
+          <div class="form-contacts__inputs">
+            <div class="form-contacts__group">
+              <label for="">
+                <input class="form-contacts__input" type="text" placeholder="+38 XXX XXX XX XX">
+              </label>
+            </div>
+          </div>
+
+          <button class="form-contacts__btn btn">Получить точный расчет</button>
+
+          <p class="form-contacts__offer offer">Отправляя данные, Вы соглашаетесь на обработку <a href="#">персональных
+              данных</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup popup--form">
+    <div class="popup__container">
+      <div class="popup__top"></div>
+
+      <button class="popup__close" type="button" aria-label="Закрыть попап"></button>
+
+      <div class="popup__body">
+        <form class="contacts__form form-contacts">
+          <h3 class="form-contacts__title">Получите ответы на все свои вопросы за 15 минут</h3>
+
+          <div class="form-contacts__inputs">
+            <div class="form-contacts__group">
+              <label for="">
+                <input class="form-contacts__input" type="text" placeholder="+38 XXX XXX XX XX">
+              </label>
+            </div>
+          </div>
+
+          <button class="form-contacts__btn btn">Получить точный расчет</button>
+
+          <p class="form-contacts__offer offer">Отправляя данные, Вы соглашаетесь на обработку <a href="#">персональных
+              данных</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <main class="main">
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Главная страница</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Жилое</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    @include('./components/_contacts.html')
+    @include('./components/_requisites.html')
+  </main>
+  @include('./components/_footer.html')
+
+  @include('./components/base/_scripts.html')
+</body>
+
+</html>

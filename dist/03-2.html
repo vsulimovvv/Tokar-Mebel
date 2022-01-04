@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Favicon -->
+ <link rel="shortcut icon" href="images/content/header/logo-mobile.png" type="image/x-icon">
+
+ <!-- Link Swiper's CSS -->
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+ <!-- nouislider -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css" />
+
+ <!-- wSelect -->
+ <link rel="stylesheet" href="css/wSelect.css">
+
+ <!-- Custom Link -->
+ <link rel="stylesheet" href="css/style.min.css">
+
+  <title>Tokar Mebel</title>
+</head>
+
+<body>
+  <header class="header">
+  <div class="container">
+    <nav class="header__wrapper">
+      <div class="header__top">
+
+        <button class="toggle-menu" type="button" aria-label="Открыть меню">
+          <span class="toggle__line"></span>
+        </button>
+
+        <a class="header__logo" href="#">
+          <picture>
+            <source srcset="images/content/header/logo-mobile.png" media="(max-width: 991px)">
+            <img src="images/content/header/logo-desktop.png" alt="Логотип">
+          </picture>
+        </a>
+
+        <div class="header__socials socials">
+          <p class="socials__text">Связаться напрямую:</p>
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link socials__link--tg" href="#" aria-label="Написать нам в телеграмм"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--wp" href="#" aria-label="Написать нам в ватсап"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--vb" href="#" aria-label="Написать нам в вайбер"></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header__phone phone-box">
+          <div class="phone-box__phone">
+            <a href="tel:380671755630">+3 80 (67) 175 56 30</a>
+            <span>с 09:00 до 18:00 (пн-вс)</span>
+          </div>
+          <div class="phone-box__button">
+            <a class="phone-box__btn btn" href="#">Заказать звонок</a>
+            <span>Бесплатно по Украине</span>
+          </div>
+        </div>
+
+        <div class="header__select">
+          <select name="select" id="select1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+
+        <div class="header__phone-icon">
+          <a class="phone-icon" href="tel:99999"></a>
+        </div>
+      </div>
+
+      <div class="header__bottom">
+        <div class="header__bottom-top">
+          <h3 class="header__bottom-title">Меню</h3>
+          <button class="header__bottom-close" type="button" aria-label="Закрыть меню">
+            <svg>
+              <use xlink:href="images/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="header__left main-menu">
+          <ul class="main-menu__list">
+            <li class="main-menu__item menu-box menu-box--living">
+              <button class="menu-box__top" type="button">Жилое</button>
+              <ul class="menu-box__drop">
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Дома из профилированого бруса</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Дома из оцилиндрованого бруса</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Каркасные дома</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Дома из блока</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu__item menu-box menu-box--commercial">
+              <button class="menu-box__top" type="button">Коммерческое</button>
+              <ul class="menu-box__drop">
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Базы отдыха</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Гостинницы</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Рестораны</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Кафе</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Магазины</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu__item menu-box menu-box--garden">
+              <button class="menu-box__top top" type="button">Садовое</button>
+              <ul class="menu-box__drop">
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Деревянные бани</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Беседки</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Альтанки</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Детские игровые площадки</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Гаражи</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Деревянные детские домики</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Мангальные зоны и барбекю</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Кухни</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="submenu">
+          <li class="submenu__item">
+            <a class="submenu__link" href="#">О компании</a>
+          </li>
+          <li class="submenu__item">
+            <a class="submenu__link" href="#">Наши работы</a>
+          </li>
+          <li class="submenu__item">
+            <a class="submenu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+
+        <div class="header__socials socials header__socials--mobile">
+          <p class="socials__text">Связаться напрямую:</p>
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link socials__link--tg" href="#" aria-label="Написать нам в телеграмм"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--wp" href="#" aria-label="Написать нам в ватсап"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--vb" href="#" aria-label="Написать нам в вайбер"></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header__phone phone-box header__phone--mobile">
+          <div class="phone-box__phone">
+            <a href="tel:380671755630">+3 80 (67) 175 56 30</a>
+            <span>с 09:00 до 18:00 (пн-вс)</span>
+          </div>
+          <div class="phone-box__button">
+            <a class="phone-box__btn btn" href="#">Заказать звонок</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+  <main class="main">
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__lint" href="#">Главная страница</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__lint" href="#">Жилое</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__lint" href="#">Вариант ST-56 «Barcelona»</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <section class="building-section">
+  <div class="container">
+    <div class="building-section__top">
+      <h2 class="building-section__title section-title">Вариант ST-56 «Barcelona»</h2>
+    </div>
+
+    <div class="building-section__wrapper">
+      <div class="building-secton__slider slider-thumbs">
+        <div class="slider-thumbs__main swiper ">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+                alt="">
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1493238792000-8113da705763?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+                alt="">
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1502877338535-766e1452684a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+                alt="">
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1502877338535-766e1452684a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+                alt="">
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1502877338535-766e1452684a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+                alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-thumbs__nav swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slider-nav__slide">
+              <img
+                src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+                alt="">
+            </div>
+            <div class="swiper-slide slider-nav__slide">
+              <img
+                src="https://images.unsplash.com/photo-1493238792000-8113da705763?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+                alt="">
+            </div>
+            <div class="swiper-slide slider-nav__slide">
+              <img
+                src="https://images.unsplash.com/photo-1502877338535-766e1452684a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+                alt="">
+            </div>
+            <div class="swiper-slide slider-nav__slide">
+              <img
+                src="https://images.unsplash.com/photo-1502877338535-766e1452684a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+                alt="">
+            </div>
+            <div class="swiper-slide slider-nav__slide">
+              <img
+                src="https://images.unsplash.com/photo-1502877338535-766e1452684a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+                alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="building-section__bottom">
+        <div class="building-section__cost-box cost-box">
+          <span class="cost-box__title">от 1 000 000 грн</span>
+          <p class="cost-box__text">Стоимость строения зависит от комплектации</p>
+          <button class="cost-box__btn btn">Получить точный расчет</button>
+        </div>
+        <form class="building-section__form form-consultation">
+          <h3 class="form-consultation__title">Закажите консультацию, если сомневаетесь</h3>
+          <div class="form-consultation__group">
+
+            <label class="form-consultation__label" for="">
+              <input class="form-consultation__input input-select" type="number" required name="phone"
+                placeholder="+38 XXX XXX XX XX">
+            </label>
+
+            <button class="form-consultation__button btn">Заказать</button>
+
+            <div class="form-consultation__select">
+              <select class="select" name="select-1" id="select">
+                <option value="US" data-icon="./images/us.png"></option>
+                <option value="FR" data-icon="./images/fr.png"></option>
+              </select>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section> -->
+
+<section class="specifications">
+  <div class="container">
+    <div class="specifications-box specifications-box--row">
+      <h2 class="specifications-box__title section-title">
+        Характеристика строения:
+      </h2>
+      <div class="specifications-box__wrapper">
+        <ul class="specifications-box__left">
+          <li class="specifications-box__spec specifications-box__spec--area">
+            <p class="specifications-box__text">20м2</p>
+          </li>
+          <li class="specifications-box__spec specifications-box__spec--height">
+            <p class="specifications-box__text">2 этажа</p>
+          </li>
+          <li class="specifications-box__spec specifications-box__spec--perimeter">
+            <p class="specifications-box__text">4x5м</p>
+          </li>
+        </ul>
+
+        <div class="specifications-box__right">
+          <div class="specifications-box__top">
+            <div class="specifications-box__img">
+              <img src="images/content/specifications/1.jpg" alt="Barcelona">
+            </div>
+
+            <div class="specifications-box__details">
+              <h3 class="specifications-box__name">
+                Barcelona
+              </h3>
+              <div class="wrap">
+                <div class="specifications-box__detail specifications-box__detail--technology">
+                  <span>Технологии</span>
+                  <p>Дом из газоблока и кирпича</p>
+                </div>
+                <div class="specifications-box__detail specifications-box__detail--term">
+                  <span>Срок строительства:</span>
+                  <p>30 дней</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="building-info building-info--two-img">
+  <div class="container">
+    <div class="building-info__box info-box">
+      <h2 class="info-box__title section-title">Планировки</h2>
+
+      <div class="info-box__previews">
+        <div class="info-box__preview info-box__preview--300">
+          <img src="images/content/building-info/1.jpg" alt="Планировка 1">
+        </div>
+        <div class="info-box__preview info-box__preview--300">
+          <img src="images/content/building-info/1.jpg" alt="Планировка 2">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+    <section class="work-process">
+  <div class="container">
+    <h2 class="work-process__title section-title">Процесс работы</h2>
+
+    <div class="work-process__wrapper">
+      <div class="process-box">
+        <div class="process-box__cursor">
+          <div class="process-box__name">Процесс 1</div>
+          <p>Общение с экспертом</p>
+        </div>
+        <ul class="process-box__list">
+          <li class="process-box__item">
+            <p class="process-box__text">Ваше знакомство
+              с представителем компании.</p>
+          </li>
+          <li class="process-box__item">
+            <p class="process-box__text">Ваше знакомство
+              с представителем компании.</p>
+          </li>
+          <li class="process-box__item">
+            <p class="process-box__text">Ваше знакомство
+              с представителем компании.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="process-box">
+        <div class="process-box__cursor">
+          <div class="process-box__name">Процесс 1</div>
+          <p>Общение с экспертом</p>
+        </div>
+        <ul class="process-box__list">
+          <li class="process-box__item">
+            <p class="process-box__text">Ваше знакомство
+              с представителем компании.</p>
+          </li>
+          <li class="process-box__item">
+            <p class="process-box__text">Ваше знакомство
+              с представителем компании.</p>
+          </li>
+          <li class="process-box__item">
+            <p class="process-box__text">Ваше знакомство
+              с представителем компании.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="process-box">
+        <div class="process-box__cursor">
+          <div class="process-box__name">Процесс 1</div>
+          <p>Общение с экспертом</p>
+        </div>
+        <ul class="process-box__list">
+          <li class="process-box__item">
+            <p class="process-box__text">Ваше знакомство
+              с представителем компании.</p>
+          </li>
+          <li class="process-box__item">
+            <p class="process-box__text">Ваше знакомство
+              с представителем компании.</p>
+          </li>
+          <li class="process-box__item">
+            <p class="process-box__text">Ваше знакомство
+              с представителем компании.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer class="footer">
+  <div class="footer__wrapper">
+    <div class="container">
+      <div class="footer__body">
+
+        <div class="footer__logo footer__logo--mobile">
+          <img src="images/footer-logo-mobile.svg" alt="Логотип">
+        </div>
+
+        <div class="footer__left main-menu">
+          <ul class="main-menu__list">
+            <li class="main-menu__item menu-box menu-box--living">
+              <button class="menu-box__top" type="button">Жилое</button>
+              <ul class="menu-box__drop">
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Дома из профилированого бруса</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Дома из оцилиндрованого бруса</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Каркасные дома</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Дома из блока</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu__item menu-box menu-box--commercial">
+              <button class="menu-box__top" type="button">Коммерческое</button>
+              <ul class="menu-box__drop">
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Базы отдыха</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Гостинницы</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Рестораны</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Кафе</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Магазины</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu__item menu-box menu-box--garden">
+              <button class="menu-box__top top" type="button">Садовое</button>
+              <ul class="menu-box__drop">
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Деревянные бани</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Беседки</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Альтанки</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Детские игровые площадки</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Гаражи</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Деревянные детские домики</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Мангальные зоны и барбекю</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Кухни</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__right">
+          <div class="footer__top">
+            <ul class="submenu">
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">О компании</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Наши работы</a>
+              </li>
+            </ul>
+
+            <button class="footer__btn btn" type="button">Заказать звонок</button>
+          </div>
+
+          <div class="footer__logo">
+            <img src="images/footer-logo.svg" alt="Логотип">
+          </div>
+
+          <div class="footer__socials socials">
+            <p class="socials__text">Связаться напрямую:</p>
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link socials__link--tg" href="#" aria-label="Написать нам в телеграмм"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--wp" href="#" aria-label="Написать нам в ватсап"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--vb" href="#" aria-label="Написать нам в вайбер"></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__phone phone-box">
+            <div class="phone-box__phone">
+              <a href="tel:380671755630">+3 80 (67) 175 56 30</a>
+              <span>с 09:00 до 18:00 (пн-вс)</span>
+            </div>
+            <div class="phone-box__button">
+              <a class="phone-box__btn btn" href="#">Заказать звонок</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- nouislider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- wSelect -->
+  <script src="js/wSelect.min.js"></script>
+
+  <!-- JS -->
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

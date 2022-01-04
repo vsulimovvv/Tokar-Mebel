@@ -6,6 +6,7 @@ body {
   color: var(--color-dark);
   background-color: var(--color-white);
   position: relative;
+  overflow-x: hidden;
 
   &.no-scroll {
     overflow: hidden;
@@ -128,14 +129,8 @@ body {
   color: var(--color-white);
   padding: 15px 28px;
   transition: 200ms ease-in;
-  // border: 2px solid transparent;
 
   &:hover {
-    // box-shadow: 0px 4px 4px rgba(203, 135, 52, 0.2);
-
-    // background: transparent;
-    // color: var(--color-accent);
-    // border-color: var(--color-accent);
     transform: translateY(-5px);
     animation: pulse 1000ms;
   }
@@ -167,10 +162,12 @@ body {
     font-weight: 600;
     font-size: 15px;
     line-height: 16px;
+    transition: 250ms;
 
     &:hover {
       box-shadow: none;
-
+      animation: none;
+      transform: translateX(5px);
     }
 
     &::after {
@@ -207,9 +204,15 @@ body {
     &:hover {
       animation: 0;
       box-shadow: 0px 4px 4px rgba(203, 135, 52, 0.2);
+
+
+      // &:hover {
+      //   box-shadow: none;
+      //   animation: none;
+      // }
     }
 
-    &:active{
+    &:active {
       box-shadow: 0px 0px 0px rgba(203, 135, 52, 0.2);
     }
 

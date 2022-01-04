@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Favicon -->
+ <link rel="shortcut icon" href="images/content/header/logo-mobile.png" type="image/x-icon">
+
+ <!-- Link Swiper's CSS -->
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+ <!-- nouislider -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css" />
+
+ <!-- wSelect -->
+ <link rel="stylesheet" href="css/wSelect.css">
+
+ <!-- Custom Link -->
+ <link rel="stylesheet" href="css/style.min.css">
+
+  <title>Tokar Mebel</title>
+</head>
+
+<body>
+  <header class="header">
+  <div class="container">
+    <nav class="header__wrapper">
+      <div class="header__top">
+
+        <button class="toggle-menu" type="button" aria-label="Открыть меню">
+          <span class="toggle__line"></span>
+        </button>
+
+        <a class="header__logo" href="#">
+          <picture>
+            <source srcset="images/content/header/logo-mobile.png" media="(max-width: 991px)">
+            <img src="images/content/header/logo-desktop.png" alt="Логотип">
+          </picture>
+        </a>
+
+        <div class="header__socials socials">
+          <p class="socials__text">Связаться напрямую:</p>
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link socials__link--tg" href="#" aria-label="Написать нам в телеграмм"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--wp" href="#" aria-label="Написать нам в ватсап"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--vb" href="#" aria-label="Написать нам в вайбер"></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header__phone phone-box">
+          <div class="phone-box__phone">
+            <a href="tel:380671755630">+3 80 (67) 175 56 30</a>
+            <span>с 09:00 до 18:00 (пн-вс)</span>
+          </div>
+          <div class="phone-box__button">
+            <a class="phone-box__btn btn" href="#">Заказать звонок</a>
+            <span>Бесплатно по Украине</span>
+          </div>
+        </div>
+
+        <div class="header__select">
+          <select name="select" id="select1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+
+        <div class="header__phone-icon">
+          <a class="phone-icon" href="tel:99999"></a>
+        </div>
+      </div>
+
+      <div class="header__bottom">
+        <div class="header__bottom-top">
+          <h3 class="header__bottom-title">Меню</h3>
+          <button class="header__bottom-close" type="button" aria-label="Закрыть меню">
+            <svg>
+              <use xlink:href="images/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="header__left main-menu">
+          <ul class="main-menu__list">
+            <li class="main-menu__item menu-box menu-box--living">
+              <button class="menu-box__top" type="button">Жилое</button>
+              <ul class="menu-box__drop">
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Дома из профилированого бруса</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Дома из оцилиндрованого бруса</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Каркасные дома</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Дома из блока</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu__item menu-box menu-box--commercial">
+              <button class="menu-box__top" type="button">Коммерческое</button>
+              <ul class="menu-box__drop">
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Базы отдыха</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Гостинницы</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Рестораны</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Кафе</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Магазины</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu__item menu-box menu-box--garden">
+              <button class="menu-box__top top" type="button">Садовое</button>
+              <ul class="menu-box__drop">
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Деревянные бани</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Беседки</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Альтанки</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Детские игровые площадки</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Гаражи</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Деревянные детские домики</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Мангальные зоны и барбекю</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Кухни</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="submenu">
+          <li class="submenu__item">
+            <a class="submenu__link" href="#">О компании</a>
+          </li>
+          <li class="submenu__item">
+            <a class="submenu__link" href="#">Наши работы</a>
+          </li>
+          <li class="submenu__item">
+            <a class="submenu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+
+        <div class="header__socials socials header__socials--mobile">
+          <p class="socials__text">Связаться напрямую:</p>
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link socials__link--tg" href="#" aria-label="Написать нам в телеграмм"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--wp" href="#" aria-label="Написать нам в ватсап"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--vb" href="#" aria-label="Написать нам в вайбер"></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header__phone phone-box header__phone--mobile">
+          <div class="phone-box__phone">
+            <a href="tel:380671755630">+3 80 (67) 175 56 30</a>
+            <span>с 09:00 до 18:00 (пн-вс)</span>
+          </div>
+          <div class="phone-box__button">
+            <a class="phone-box__btn btn" href="#">Заказать звонок</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+  <main class="main">
+    <div class="filter-actions">
+      <button class="filter-actions__btn filter-actions__btn--filter">
+        <svg>
+          <use xlink:href="images/sprite.svg#filter-icon"></use>
+        </svg>
+      </button>
+      <button class="filter-actions__btn filter-actions__btn--search">
+        <svg>
+          <use xlink:href="images/sprite.svg#search-icon"></use>
+        </svg></button>
+    </div>
+
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__lint" href="#">Главная страница</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__lint" href="#">Жилое</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="catalog">
+  <div class="container">
+    <div class="catalog__top top-section">
+      <h1 class="catalog__title section-title">Каталог жилых строений</h1>
+
+      <form class="catalog__search form-search">
+        <div class="form-search__group">
+          <label class="form-search__label" for="search">
+            <input class="form-search__input" id="search" type="search" name="search"
+              placeholder="Поиск по жилым строениям...">
+          </label>
+        </div>
+      </form>
+      
+    </div>
+    <div class="catalog__body">
+
+      <div class="catalog__filters filters">
+        <section class="filter-box filter-box--category">
+          <div class="filter-box__top">
+            <h2 class="filter-box__title">Подкатегория</h2>
+          </div>
+          <div class="filter-box__drop">
+            <h3 class="filter-box__subtitle">Дома и жилые строения</h3>
+            <ul class="filter-box__list">
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Дома</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Дома из профилированого бруса</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Дома из оцилиндрованого бруса</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Каркасные дома</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Дома из блока</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Дачи</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Коттеджи</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Виллы</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Усадьбы</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Особняки</a>
+              </li>
+            </ul>
+          </div>
+          <div class="filter-box__drop">
+            <h3 class="filter-box__subtitle">Коммерческие строения</h3>
+            <ul class="filter-box__list">
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Базы отдыха</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Гостинницы</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Рестораны</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Кафе</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Магазины</a>
+              </li>
+            </ul>
+          </div>
+          <div class="filter-box__drop">
+            <h3 class="filter-box__subtitle">Садовые и хоз постройки
+            </h3>
+            <ul class="filter-box__list">
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Деревянные бани из оцилиндрованого бруса</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Деревянные бани из профилированого бруса</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Каркасные конструкции</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Беседки</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Альтанки</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Гаражи</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Кухни</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Детские игровые площадки</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Деревянные детские домики</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Мангальные зоны и барбекю</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="filter-box filter-box--sort">
+          <div class="filter-box__top">
+            <h2 class="filter-box__title">Сортировать по:</h2>
+          </div>
+          <div class="filter-box__drop">
+            <ul class="filter-box__list">
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Алфавиту</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">
+                  Популярности</a>
+              </li>
+              <li class="filter-box__item">
+                <a class="filter-box__link" href="#">Цене</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="filter-box filter-box--square">
+          <div class="filter-box__top">
+            <h2 class="filter-box__title">Площадь (м2):</h2>
+          </div>
+          <div class="filter-box__drop">
+            <div class="filter-box__slider range-slider"></div>
+            <div class="filter-box__inputs">
+              <label class="filter-box__label">
+                <span class="filter-box__text">10</span>
+                <input class="filter-box__input" type="number" min="0" max="1100" id="input-1">
+              </label>
+              <label class="filter-box__label">
+                <input class="filter-box__input" type="number" min="0" max="1100" id="input-2">
+                <span class="filter-box__text">500</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section class="filter-box filter-box--price">
+          <div class="filter-box__top">
+            <h2 class="filter-box__title">Цена (грн):</h2>
+          </div>
+          <div class="filter-box__drop">
+            <div class="filter-box__slider range-slider2"></div>
+            <div class="filter-box__inputs">
+              <label class="filter-box__label">
+                <span class="filter-box__text">100 000</span>
+                <input class="filter-box__input" type="number" min="0" max="5000000" id="input-3">
+              </label>
+              <label class="filter-box__label">
+                <input class="filter-box__input" type="number" min="0" max="5000000" id="input-4">
+                <span class="filter-box__text">5 000 000</span>
+              </label>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="">
+        <div class="catalog__content">
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <article class="product-card product-card--catalog">
+                <div class="product-card__img">
+                  <img src="images/content/catalog/1.jpg" alt="Жилое">
+                </div>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">Вариант Z-65 <br> «Bavaria»</h3>
+                  <div class="product-card__details">
+                    <div class="product-card__detail product-card__detail--perimeter">
+                      7,5х9 м
+                    </div>
+                    <div class="product-card__detail product-card__detail--area">53.6 м2</div>
+                  </div>
+                  <div class="product-card__bottom">
+                    <button class="product-card__btn btn" type="button">Ознакомиться</button>
+                    <div class="product-card__price">1 000 000 грн</div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="product-card product-card--catalog">
+                <div class="product-card__img">
+                  <img src="images/content/products/p-2.jpg" alt="Жилое">
+                </div>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">Вариант Z-65 <br> «Bavaria»</h3>
+                  <div class="product-card__details">
+                    <div class="product-card__detail product-card__detail--perimeter">
+                      7,5х9 м
+                    </div>
+                    <div class="product-card__detail product-card__detail--area">53.6 м2</div>
+                  </div>
+                  <div class="product-card__bottom">
+                    <button class="product-card__btn btn" type="button">Ознакомиться</button>
+                    <div class="product-card__price">1 000 000 грн</div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="product-card product-card--catalog">
+                <div class="product-card__img">
+                  <img src="images/content/products/p-2.jpg" alt="Жилое">
+                </div>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">Вариант Z-65 <br> «Bavaria»</h3>
+                  <div class="product-card__details">
+                    <div class="product-card__detail product-card__detail--perimeter">
+                      7,5х9 м
+                    </div>
+                    <div class="product-card__detail product-card__detail--area">53.6 м2</div>
+                  </div>
+                  <div class="product-card__bottom">
+                    <button class="product-card__btn btn" type="button">Ознакомиться</button>
+                    <div class="product-card__price">1 000 000 грн</div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="product-card product-card--catalog">
+                <div class="product-card__img">
+                  <img src="images/content/products/p-2.jpg" alt="Жилое">
+                </div>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">Вариант Z-65 <br> «Bavaria»</h3>
+                  <div class="product-card__details">
+                    <div class="product-card__detail product-card__detail--perimeter">
+                      7,5х9 м
+                    </div>
+                    <div class="product-card__detail product-card__detail--area">53.6 м2</div>
+                  </div>
+                  <div class="product-card__bottom">
+                    <button class="product-card__btn btn" type="button">Ознакомиться</button>
+                    <div class="product-card__price">1 000 000 грн</div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="product-card product-card--catalog">
+                <div class="product-card__img">
+                  <img src="images/content/products/p-2.jpg" alt="Жилое">
+                </div>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">Вариант Z-65 <br> «Bavaria»</h3>
+                  <div class="product-card__details">
+                    <div class="product-card__detail product-card__detail--perimeter">
+                      7,5х9 м
+                    </div>
+                    <div class="product-card__detail product-card__detail--area">53.6 м2</div>
+                  </div>
+                  <div class="product-card__bottom">
+                    <button class="product-card__btn btn" type="button">Ознакомиться</button>
+                    <div class="product-card__price">1 000 000 грн</div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="product-card product-card--catalog">
+                <div class="product-card__img">
+                  <img src="images/content/products/p-2.jpg" alt="Жилое">
+                </div>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">Вариант Z-65 <br> «Bavaria»</h3>
+                  <div class="product-card__details">
+                    <div class="product-card__detail product-card__detail--perimeter">
+                      7,5х9 м
+                    </div>
+                    <div class="product-card__detail product-card__detail--area">53.6 м2</div>
+                  </div>
+                  <div class="product-card__bottom">
+                    <button class="product-card__btn btn" type="button">Ознакомиться</button>
+                    <div class="product-card__price">1 000 000 грн</div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="product-card product-card--catalog">
+                <div class="product-card__img">
+                  <img src="images/content/products/p-2.jpg" alt="Жилое">
+                </div>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">Вариант Z-65 <br> «Bavaria»</h3>
+                  <div class="product-card__details">
+                    <div class="product-card__detail product-card__detail--perimeter">
+                      7,5х9 м
+                    </div>
+                    <div class="product-card__detail product-card__detail--area">53.6 м2</div>
+                  </div>
+                  <div class="product-card__bottom">
+                    <button class="product-card__btn btn" type="button">Ознакомиться</button>
+                    <div class="product-card__price">1 000 000 грн</div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="product-card product-card--catalog">
+                <div class="product-card__img">
+                  <img src="images/content/products/p-2.jpg" alt="Жилое">
+                </div>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">Вариант Z-65 <br> «Bavaria»</h3>
+                  <div class="product-card__details">
+                    <div class="product-card__detail product-card__detail--perimeter">
+                      7,5х9 м
+                    </div>
+                    <div class="product-card__detail product-card__detail--area">53.6 м2</div>
+                  </div>
+                  <div class="product-card__bottom">
+                    <button class="product-card__btn btn" type="button">Ознакомиться</button>
+                    <div class="product-card__price">1 000 000 грн</div>
+                  </div>
+                </div>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="product-card product-card--catalog">
+                <div class="product-card__img">
+                  <img src="images/content/products/p-2.jpg" alt="Жилое">
+                </div>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">Вариант Z-65 <br> «Bavaria»</h3>
+                  <div class="product-card__details">
+                    <div class="product-card__detail product-card__detail--perimeter">
+                      7,5х9 м
+                    </div>
+                    <div class="product-card__detail product-card__detail--area">53.6 м2</div>
+                  </div>
+                  <div class="product-card__bottom">
+                    <button class="product-card__btn btn" type="button">Ознакомиться</button>
+                    <div class="product-card__price">1 000 000 грн</div>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+
+        <div class="catalog__develop develop">
+          <div class="develop__wrapper">
+            <div class="develop__offer">
+              <h3 class="develop__title section-title">Нет подходящего проекта?</h3>
+              <div class="develop__text">
+                <p>Мы разработаем проект индивидуально под ваш запрос с помощью 3D-макета</p>
+              </div>
+
+              <button class="develop__btn btn" type="button">Разработать проект</button>
+            </div>
+            <div class="develop__preview"></div>
+          </div>
+        </div>
+
+        <button class="catalog__btn btn btn--bg" type="button"><span>Показать еще больше</span></button>
+<!-- span для того чтобы по центру сделатьи на всю ширину  -->
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer class="footer">
+  <div class="footer__wrapper">
+    <div class="container">
+      <div class="footer__body">
+
+        <div class="footer__logo footer__logo--mobile">
+          <img src="images/footer-logo-mobile.svg" alt="Логотип">
+        </div>
+
+        <div class="footer__left main-menu">
+          <ul class="main-menu__list">
+            <li class="main-menu__item menu-box menu-box--living">
+              <button class="menu-box__top" type="button">Жилое</button>
+              <ul class="menu-box__drop">
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Дома из профилированого бруса</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Дома из оцилиндрованого бруса</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Каркасные дома</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Дома из блока</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu__item menu-box menu-box--commercial">
+              <button class="menu-box__top" type="button">Коммерческое</button>
+              <ul class="menu-box__drop">
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Базы отдыха</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Гостинницы</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Рестораны</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Кафе</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Магазины</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu__item menu-box menu-box--garden">
+              <button class="menu-box__top top" type="button">Садовое</button>
+              <ul class="menu-box__drop">
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Деревянные бани</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Беседки</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Альтанки</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Детские игровые площадки</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Гаражи</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Деревянные детские домики</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Мангальные зоны и барбекю</a>
+                </li>
+                <li class="menu-box__item">
+                  <a class="menu-box__link" href="#">Кухни</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__right">
+          <div class="footer__top">
+            <ul class="submenu">
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">О компании</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Наши работы</a>
+              </li>
+            </ul>
+
+            <button class="footer__btn btn" type="button">Заказать звонок</button>
+          </div>
+
+          <div class="footer__logo">
+            <img src="images/footer-logo.svg" alt="Логотип">
+          </div>
+
+          <div class="footer__socials socials">
+            <p class="socials__text">Связаться напрямую:</p>
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link socials__link--tg" href="#" aria-label="Написать нам в телеграмм"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--wp" href="#" aria-label="Написать нам в ватсап"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--vb" href="#" aria-label="Написать нам в вайбер"></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__phone phone-box">
+            <div class="phone-box__phone">
+              <a href="tel:380671755630">+3 80 (67) 175 56 30</a>
+              <span>с 09:00 до 18:00 (пн-вс)</span>
+            </div>
+            <div class="phone-box__button">
+              <a class="phone-box__btn btn" href="#">Заказать звонок</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- nouislider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- wSelect -->
+  <script src="js/wSelect.min.js"></script>
+
+  <!-- JS -->
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
